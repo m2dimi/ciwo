@@ -1,0 +1,137 @@
+/*-----------Variables---------------*/
+/*-----------Mixin--------------*/
+/*-----------Classes utiles--------------*/
+/*Levitation*/
+.levitate {
+  -webkit-animation: levitate 3s infinite;
+  -moz-animation: levitate 3s infinite;
+}
+.levitate-reverse {
+  -webkit-animation: levitate-reverse 3s infinite;
+  -moz-animation: levitate-reverse 3s infinite;
+}
+@-webkit-keyframes levitate {
+  0% {
+    -webkit-transform: translateY(5px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(5px);
+  }
+}
+@-webkit-keyframes levitate-reverse {
+  0% {
+    -webkit-transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@-moz-keyframes levitate {
+  0% {
+    -moz-transform: translateY(5px);
+  }
+  50% {
+    -moz-transform: translateY(-5px);
+  }
+  100% {
+    -moz-transform: translateY(5px);
+  }
+}
+@-moz-keyframes levitate-reverse {
+  0% {
+    -webkit-transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@-o-keyframes levitate {
+  0% {
+    -o-transform: translateY(5px);
+  }
+  50% {
+    -o-transform: translateY(-5px);
+  }
+  100% {
+    -o-transform: translateY(5px);
+  }
+}
+@-o-keyframes levitate-reverse {
+  0% {
+    -webkit-transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@-ms-keyframes levitate {
+  0% {
+    -ms-transform: translateY(5px);
+  }
+  50% {
+    -ms-transform: translateY(-5px);
+  }
+  100% {
+    -ms-transform: translateY(5px);
+  }
+}
+@-ms-keyframes levitate-reverse {
+  0% {
+    -webkit-transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes levitate {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@keyframes levitate-reverse {
+  0% {
+    -webkit-transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+/*-----------Preloader--------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+/*-----------Header--------------*/
+/*-----------Content--------------*/
+/*-----------Footer--------------*/
