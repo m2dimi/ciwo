@@ -1,19 +1,25 @@
 /*-----------Variables---------------*/
-
+@yellow: #ffec04;
 
 /*-----------Mixin--------------*/
-
+.Transition{
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
 /*-----------Classes utiles--------------*/
-
+.centeredContent{
+  margin: 0 auto;
+  display: table;
+}
 /*Levitation*/
 
 .levitate{
   -webkit-animation: levitate 3s infinite;
   -moz-animation: levitate 3s infinite;
-}
-.levitate-reverse{
-  -webkit-animation: levitate-reverse 3s infinite;
-  -moz-animation: levitate-reverse 3s infinite;
+
 }
 @-webkit-keyframes levitate {
   0% { -webkit-transform: translateY(5px); }
@@ -21,32 +27,16 @@
   100% { -webkit-transform: translateY(5px); }
 }
 
-@-webkit-keyframes levitate-reverse {
-  0% { -webkit-transform: translateY(-5px); }
-  50% { -webkit-transform: translateY(5px); }
-  100% { -webkit-transform: translateY(-5px); }
-}
-
 @-moz-keyframes levitate {
   0% { -moz-transform: translateY(5px); }
   50% { -moz-transform: translateY(-5px); }
   100% { -moz-transform: translateY(5px); }
-}
-@-moz-keyframes levitate-reverse {
-  0% { -webkit-transform: translateY(-5px); }
-  50% { -webkit-transform: translateY(5px); }
-  100% { -webkit-transform: translateY(-5px); }
 }
 
 @-o-keyframes levitate {
   0% { -o-transform: translateY(5px); }
   50% { -o-transform: translateY(-5px); }
   100% { -o-transform: translateY(5px); }
-}
-@-o-keyframes levitate-reverse {
-  0% { -webkit-transform: translateY(-5px); }
-  50% { -webkit-transform: translateY(5px); }
-  100% { -webkit-transform: translateY(-5px); }
 }
 
 @-ms-keyframes levitate {
@@ -55,25 +45,11 @@
   100% { -ms-transform: translateY(5px); }
 }
 
-@-ms-keyframes levitate-reverse {
-  0% { -webkit-transform: translateY(-5px); }
-  50% { -webkit-transform: translateY(5px); }
-  100% { -webkit-transform: translateY(-5px); }
-}
-
 @keyframes levitate {
   0% { transform: translateY(5px); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(5px); }
 }
-
-
-@keyframes levitate-reverse {
-  0% { -webkit-transform: translateY(-5px); }
-  50% { -webkit-transform: translateY(5px); }
-  100% { -webkit-transform: translateY(-5px); }
-}
-
 
 /*-----------Preloader--------------*/
 #preloader {
@@ -86,5 +62,133 @@
   z-index:99; /* makes sure it stays on top */
 }
 /*-----------Header--------------*/
+body {
+  background: url(img/bg_ciwo.jpg) center center fixed;
+  background-size: cover;
+}
+.title_head{
+  position: absolute;
+  top: 50%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -275px;
+  h1{
+    .lighter{font-weight: lighter; color: @yellow;}
+    color: #ffffff;
+    font-size: 130px;
+    letter-spacing: 10px;
+    float: left;
+    margin-left: 78px;
+  }
+  .arrowDown{
+    margin-top: 24px;
+    text-decoration: none;
+    color: #ffffff;
+    diplay: table;
+    float: left;
+    font-size: 130px;
+    font-weight: bold;
+  }
+  #timeline{
+    .Transition;
+  }
+}
+
+.subtle{
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 3px;
+  p{font-style: italic;}
+}
+
+.sideBar{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  ul{
+    margin-top: 150px;
+    padding: 0;
+    li{
+      list-style: none;
+      a{
+        position: relative;
+        display: block;
+        margin: 50px auto;
+        outline: none;
+        color: #fff;
+        text-align: center;
+        font-weight: lighter;
+        text-decoration: none;
+        letter-spacing: 2px;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+        padding: 0 0 10px;
+        max-width: 160px;
+        width: 100%;
+        &:hover{
+          outline: none;
+          color: @yellow;
+          &:after {
+            height: 5px;
+            opacity: 1;
+            -webkit-transform: translateY(0px);
+            -moz-transform: translateY(0px);
+            transform: translateY(0px);
+          }
+        }
+        &:after{
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: @yellow;
+          content: '';
+          opacity: 0;
+          -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+          -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+          transition: height 0.3s, opacity 0.3s, transform 0.3s;
+          -webkit-transform: translateY(-10px);
+          -moz-transform: translateY(-10px);
+          transform: translateY(-10px);
+
+        }
+      }
+    }
+  }
+  .legend{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+  }
+  .gender{
+    float: left;
+    span{
+      text-align: center;
+      font-style: italic;
+      display: block;
+      margin: 10px 0;
+      color: #fff;
+    }
+    .circleGender{
+      width: 70px;
+      height: 70px; margin: 0 10px;
+      border-radius: 50%;
+    }
+    #man{
+      background: @yellow;
+    }
+    #woman{
+      border: 10px solid #fff;
+    }
+  }
+}
+
 /*-----------Content--------------*/
+
+
 /*-----------Footer--------------*/
