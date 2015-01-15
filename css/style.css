@@ -88,6 +88,7 @@
 body {
   background: url(img/bg_ciwo.jpg) center center fixed;
   background-size: cover;
+  font-family: 'Century Gothic', arial, serif;
 }
 .title_head {
   position: absolute;
@@ -168,7 +169,7 @@ body {
   color: #ffec04;
 }
 .sideBar ul li a:hover:after {
-  height: 5px;
+  height: 2px;
   opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
@@ -178,7 +179,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: inherit;
   height: 1px;
   background: #ffec04;
   content: '';

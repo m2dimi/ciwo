@@ -49,8 +49,7 @@ $(function(){
                 height: 1900
             }, 1000);
             $('#femaleSymbol').delay(1000).removeClass('levitate');
-        }, 1000);
-        //.delay(1000).queue(function(next) { $(this).attr('height','1900px'); next(); });
+        }, 500);
     });
 
 
