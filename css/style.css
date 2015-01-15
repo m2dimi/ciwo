@@ -14,8 +14,8 @@
 }
 /*Levitation*/
 .levitate {
-  -webkit-animation: levitate 3s infinite;
-  -moz-animation: levitate 3s infinite;
+  -webkit-animation: levitate 1.5s infinite;
+  -moz-animation: levitate 1.5s infinite;
 }
 @-webkit-keyframes levitate {
   0% {
