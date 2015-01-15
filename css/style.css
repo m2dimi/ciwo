@@ -22,7 +22,7 @@
     -webkit-transform: translateY(5px);
   }
   50% {
-    -webkit-transform: translateY(-5px);
+    -webkit-transform: translateY(-15px);
   }
   100% {
     -webkit-transform: translateY(5px);
@@ -33,7 +33,7 @@
     -moz-transform: translateY(5px);
   }
   50% {
-    -moz-transform: translateY(-5px);
+    -moz-transform: translateY(-15px);
   }
   100% {
     -moz-transform: translateY(5px);
@@ -44,7 +44,7 @@
     -o-transform: translateY(5px);
   }
   50% {
-    -o-transform: translateY(-5px);
+    -o-transform: translateY(-15px);
   }
   100% {
     -o-transform: translateY(5px);
@@ -55,7 +55,7 @@
     -ms-transform: translateY(5px);
   }
   50% {
-    -ms-transform: translateY(-5px);
+    -ms-transform: translateY(-15px);
   }
   100% {
     -ms-transform: translateY(5px);
@@ -66,7 +66,7 @@
     transform: translateY(5px);
   }
   50% {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
   }
   100% {
     transform: translateY(5px);

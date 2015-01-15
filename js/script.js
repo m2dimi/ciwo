@@ -34,7 +34,9 @@ $(function(){
     });
 
     $('#femaleSymbol').click(function(){
+
         $('.subtle').fadeOut();
+
         $('.sideBar').delay(1500).fadeIn();
         $('.title_head').animate({
            marginTop : '-455px'
@@ -46,7 +48,7 @@ $(function(){
             timeline.animate({
                 height: 1900
             }, 1000);
-
+            $('#femaleSymbol').delay(1000).removeClass('levitate');
         }, 1000);
         //.delay(1000).queue(function(next) { $(this).attr('height','1900px'); next(); });
     });
