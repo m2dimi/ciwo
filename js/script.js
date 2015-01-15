@@ -37,7 +37,7 @@ $(function(){
 
         $('.subtle').fadeOut();
 
-        $('.sideBar').delay(1500).fadeIn();
+        $('.sideBar').fadeIn();
         $('.title_head').animate({
            marginTop : '-455px'
         },1000);
