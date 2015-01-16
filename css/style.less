@@ -212,7 +212,7 @@ body {
     margin-bottom: 25px;
   }
   .stats-ciwo{
-
+  border-radius: 50%;
     height: 150px;
     background: rgba(255,255,255,0.5);
   }
@@ -225,11 +225,14 @@ body {
   li{
     list-style-type: none;
     .Transition;
+    .stats-ciwo{
+      opacity: 0.5;
+      .Transition;
+    }
     &:hover{
-
-      /*.owl-carousel{
-        visibility: visible;
-      }*/
+      .stats-ciwo{
+        opacity: 1;
+      }
     }
     .owl-carousel{
       .Transition;
@@ -240,6 +243,9 @@ body {
     .Transition;
     .owl-carousel{
      opacity: 1!important;
+    }
+    .stats-ciwo{
+      opacity: 1;
     }
   }
 }
