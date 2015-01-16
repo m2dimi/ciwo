@@ -249,7 +249,6 @@ body {
 }
 .list-gender li {
   list-style-type: none;
-  opacity: 0.5;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s ;
   -ms-transition: 0.3s;
@@ -257,10 +256,27 @@ body {
   transition: 0.3s;
 }
 .list-gender li:hover {
-  opacity: 1;
+  /*.owl-carousel{
+        visibility: visible;
+      }*/
+}
+.list-gender li .owl-carousel {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0 !important;
 }
 .list-gender .active-gender {
-  opacity: 1;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.list-gender .active-gender .owl-carousel {
+  opacity: 1!important;
 }
 .owl-carousel .owl-item {
   width: 100px !important;

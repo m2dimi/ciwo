@@ -224,11 +224,24 @@ body {
   padding: 0;
   li{
     list-style-type: none;
-    opacity: 0.5;
     .Transition;
-    &:hover{opacity: 1;}
+    &:hover{
+
+      /*.owl-carousel{
+        visibility: visible;
+      }*/
+    }
+    .owl-carousel{
+      .Transition;
+      opacity: 0 !important;
+    }
   }
-  .active-gender{opacity: 1;}
+  .active-gender{
+    .Transition;
+    .owl-carousel{
+     opacity: 1!important;
+    }
+  }
 }
 .owl-carousel .owl-item{
   width: 100px !important;
