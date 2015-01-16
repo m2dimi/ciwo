@@ -6,10 +6,19 @@ $(function(){
         $('#preloader').delay(350).fadeOut('slow');
         $('body').delay(350).css({'overflow':'visible'});
     });
-
-    $("body").mCustomScrollbar({
-        theme:"minimal"
+    $(".list-gender li").click(function(){
+        // If this isn't already active
+        if (!$(this).hasClass("active")) {
+            // Remove the class from anything that is active
+            $("li.active-gender").removeClass("active-gender");
+            // And make this active
+            $(this).addClass("active-gender");
+        }
     });
+
+   /*$("body").mCustomScrollbar({
+        theme:"minimal"
+    });*/
     var s = Snap("#Capa_1");
     var timeline = s.rect(52, 92, 16, 60);
     var rect = s.rect(35, 120, 50, 15);
@@ -39,7 +48,7 @@ $(function(){
     $('#femaleSymbol').click(function(){
 
         $('.subtle').fadeOut();
-
+        $('#main-content').delay(1000).fadeIn();
         $('.sideBar').fadeIn();
         $('.title_head').animate({
            margin : '0% auto'
@@ -54,7 +63,15 @@ $(function(){
             $('#femaleSymbol').delay(1000).removeClass('levitate');
         }, 500);
     });
+    /*carousel men women*/
 
+    $(".men-slider").owlCarousel({
+        jsonPath : "json/men.json"
+    });
+
+    $(".women-slider").owlCarousel({
+        jsonPath : "json/women.json"
+    });
 
 
 

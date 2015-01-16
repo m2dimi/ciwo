@@ -14,6 +14,9 @@
   margin: 0 auto;
   display: table;
 }
+.no-padding{
+  padding: 0 !important;
+}
 /*Levitation*/
 
 .levitate{
@@ -65,13 +68,15 @@
 body {
   background: url(img/bg_ciwo.jpg) center center fixed;
   background-size: cover;
-  overflow: hidden !important;
+  //overflow: hidden !important;
   height: 100vh !important;
+  font-family: 'century gothic', "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
 }
-
+/*Timeline*/
 .title_head{
   display: table;
   margin: 18% auto 0;
+  position: relative;
   /*position: absolute;
   top: 50%;
   margin-top: -650px;
@@ -89,7 +94,7 @@ body {
     margin-top: 24px;
     text-decoration: none;
     color: #ffffff;
-    diplay: table;
+    display: table;
     float: left;
     font-size: 130px;
     font-weight: bold;
@@ -120,48 +125,48 @@ body {
     padding: 0;
     li{
       list-style: none;
+      margin-bottom: 40px;
       a{
+        /*main style*/
         position: relative;
         display: block;
-        margin: 50px auto;
+        margin: 15px 25px;
         outline: none;
         color: #fff;
         text-align: center;
-        font-weight: lighter;
         text-decoration: none;
         letter-spacing: 2px;
-        text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-        font-size: 16px;
-        padding: 0 0 10px;
-        max-width: 160px;
-        width: 100%;
+        font-weight: lighter;
+        text-shadow: 0 0 1px rgba(255,255,255,0.3);
+        font-size: 1.35em;
+        /*Effect*/
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
         &:hover{
-          outline: none;
           color: @yellow;
-          &:after {
-            height: 5px;
-            opacity: 1;
-            -webkit-transform: translateY(0px);
-            -moz-transform: translateY(0px);
-            transform: translateY(0px);
+          outline: none;
+          &:before {
+            color: @yellow;
+            text-shadow: 10px 0 @yellow, -10px 0 @yellow;
           }
         }
-        &:after{
+        &:before{
           position: absolute;
           top: 100%;
-          left: 0;
-          width: 100%;
-          height: 1px;
-          background: @yellow;
-          content: '';
-          opacity: 0;
-          -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-          -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
-          transition: height 0.3s, opacity 0.3s, transform 0.3s;
-          -webkit-transform: translateY(-10px);
-          -moz-transform: translateY(-10px);
-          transform: translateY(-10px);
-
+          left: 50%;
+          color: transparent;
+          content: '•';
+          text-shadow: 0 0 transparent;
+          font-size: 1.2em;
+          -webkit-transition: text-shadow 0.3s, color 0.3s;
+          -moz-transition: text-shadow 0.3s, color 0.3s;
+          transition: text-shadow 0.3s, color 0.3s;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          transform: translateX(-50%);
+          pointer-events: none;
+          box-sizing: border-box;
         }
       }
     }
@@ -196,14 +201,48 @@ body {
 
 /*-----------Content--------------*/
 
+#main-content{
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: -65px;
+  .men-slider, .women-slider{
+    //background: rgba(255,255,255,0.7);
+    height: 150px;
+    margin-bottom: 25px;
+  }
+  .stats-ciwo{
+
+    height: 150px;
+    background: rgba(255,255,255,0.5);
+  }
+
+}
 
 /*-----------Footer--------------*/
-
+.list-gender{
+  padding: 0;
+  li{
+    list-style-type: none;
+    opacity: 0.5;
+    .Transition;
+    &:hover{opacity: 1;}
+  }
+  .active-gender{opacity: 1;}
+}
+.owl-carousel .owl-item{
+  width: 100px !important;
+  margin-right: 10px;
+  img{
+    border-radius: 5px;
+  }
+}
 
 /*-----------MediaQueries--------------*/
 @media screen and (max-width:1366px){
   .sideBar ul {
     margin-top: 60px;
+
   }
 }
 
