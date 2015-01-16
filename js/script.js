@@ -3,7 +3,7 @@ $(function(){
     /*Preloader*/
     $(window).load(function() {
         $('#status').fadeOut();
-        $('#preloader').delay(350).fadeOut('slow');
+        $('#preloader').delay(500).fadeOut('slow');
         $('body').delay(350).css({'overflow':'visible'});
     });
     $(".list-gender li").click(function(){
@@ -16,6 +16,9 @@ $(function(){
         }
     });
 
+    $(".desc-gallery").owlCarousel({
+        jsonPath : "json/womenGallery.json"
+    });
 
 
    /*$("body").mCustomScrollbar({
@@ -75,6 +78,28 @@ $(function(){
         jsonPath : "json/women.json"
     });
 
+
+    /*D3 Data
+
+    var diameter = 960,
+        format = d3.format(",d"),
+        color = d3.scale.category20c();
+
+    var bubble = d3.layout.pack()
+        .sort(null)
+        .size([diameter, diameter])
+        .padding(1.5);
+
+    var svg = d3.select(".stats-ciwo").append("svg")
+        .attr("width", diameter)
+        .attr("height", diameter)
+        .attr("class", "bubble");
+
+    d3.json("json/60data.json",  function(error, root){
+        var nod = svg.selectAll(".node")
+            .data(bubble.nodes(classes(root)))
+            .filter(function(d))
+    });*/
 
 
 
