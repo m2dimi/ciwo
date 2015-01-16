@@ -7,6 +7,9 @@ $(function(){
         $('body').delay(350).css({'overflow':'visible'});
     });
 
+    $("body").mCustomScrollbar({
+        theme:"minimal"
+    });
     var s = Snap("#Capa_1");
     var timeline = s.rect(52, 92, 16, 60);
     var rect = s.rect(35, 120, 50, 15);
@@ -39,7 +42,7 @@ $(function(){
 
         $('.sideBar').fadeIn();
         $('.title_head').animate({
-           marginTop : '-455px'
+           margin : '0% auto'
         },1000);
         setTimeout(function(){
             s.animate({

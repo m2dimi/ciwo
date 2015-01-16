@@ -14,8 +14,8 @@
 }
 /*Levitation*/
 .levitate {
-  -webkit-animation: levitate 1.5s infinite;
-  -moz-animation: levitate 1.5s infinite;
+  -webkit-animation: levitate 0.6s infinite;
+  -moz-animation: levitate 0.6s infinite;
 }
 @-webkit-keyframes levitate {
   0% {
@@ -88,14 +88,17 @@
 body {
   background: url(img/bg_ciwo.jpg) center center fixed;
   background-size: cover;
-  font-family: 'Century Gothic', arial, serif;
+  overflow: hidden !important;
+  height: 100vh !important;
 }
 .title_head {
-  position: absolute;
+  display: table;
+  margin: 18% auto 0;
+  /*position: absolute;
   top: 50%;
-  margin-top: -150px;
+  margin-top: -650px;
   left: 50%;
-  margin-left: -275px;
+  margin-left: -275px;*/
 }
 .title_head h1 {
   color: #ffffff;
@@ -169,7 +172,7 @@ body {
   color: #ffec04;
 }
 .sideBar ul li a:hover:after {
-  height: 2px;
+  height: 5px;
   opacity: 1;
   -webkit-transform: translateY(0px);
   -moz-transform: translateY(0px);
@@ -179,7 +182,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  width: inherit;
+  width: 100%;
   height: 1px;
   background: #ffec04;
   content: '';
@@ -220,3 +223,9 @@ body {
 }
 /*-----------Content--------------*/
 /*-----------Footer--------------*/
+/*-----------MediaQueries--------------*/
+@media screen and (max-width: 1366px) {
+  .sideBar ul {
+    margin-top: 60px;
+  }
+}

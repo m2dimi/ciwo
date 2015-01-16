@@ -65,13 +65,18 @@
 body {
   background: url(img/bg_ciwo.jpg) center center fixed;
   background-size: cover;
+  overflow: hidden !important;
+  height: 100vh !important;
 }
+
 .title_head{
-  position: absolute;
+  display: table;
+  margin: 18% auto 0;
+  /*position: absolute;
   top: 50%;
-  margin-top: -150px;
+  margin-top: -650px;
   left: 50%;
-  margin-left: -275px;
+  margin-left: -275px;*/
   h1{
     .lighter{font-weight: lighter; color: @yellow;}
     color: #ffffff;
@@ -101,7 +106,8 @@ body {
   letter-spacing: 3px;
   p{font-style: italic;}
 }
-
+.timy{
+}
 .sideBar{
   display: none;
   position: fixed;
@@ -192,3 +198,12 @@ body {
 
 
 /*-----------Footer--------------*/
+
+
+/*-----------MediaQueries--------------*/
+@media screen and (max-width:1366px){
+  .sideBar ul {
+    margin-top: 60px;
+  }
+}
+
