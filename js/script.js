@@ -6,6 +6,60 @@ $(function(){
         $('#preloader').delay(500).fadeOut('slow');
         $('body').delay(350).css({'overflow':'visible'});
     });
+
+
+    // When we click on the LI
+    $(".genderBlock").click(function(){
+        // If this isn't already active
+        if (!$(this).parent().hasClass("activeLi")) {
+            // Remove the class from anything that is active
+            $("li.activeLi").removeClass("activeLi");
+            // And make this active
+            $(this).parent().addClass("activeLi");
+        }
+    });
+    $("#femaleSymbol").click(function(){
+        $("#line").animate({
+            height : '150vh'
+        }, 2000);
+        $("#contentLine").delay(1000).animate({
+            opacity : 1
+        }, 1000);
+    });
+
+
+    /*Ascensor Plugin*/
+    var ascensor = $('#ascensorBuilding').ascensor({
+        direction: [[0,1],[1,1],[1,0],[1,2],[1,1],[1,2],[2,0],[2,1]],
+        time: 300
+    });
+    var ascensorInstance = $('#ascensorBuilding').data('ascensor');
+    $(".links-to-floor li").click(function(event, index) {
+        ascensorInstance.scrollToFloor($(this).index());
+    });
+
+    $(".links-to-floor li:eq("+ ascensor.data("current-floor") +")").addClass("selected");
+
+    ascensor.on("scrollStart", function(event, floor){
+        $(".links-to-floor li").removeClass("selected");
+        $(".links-to-floor li:eq("+floor.to+")").addClass("selected");
+    });
+
+    $(".prev").click(function() {
+        ascensorInstance.prev();
+    });
+
+    $(".next").click(function() {
+        ascensorInstance.next();
+    });
+
+    $(".direction").click(function() {
+        ascensorInstance.scrollToDirection($(this).data("direction"));
+    });
+
+    $('.floor-2').perfectScrollbar({suppressScrollX: true});
+
+
     $(".list-gender li").click(function(){
         // If this isn't already active
         if (!$(this).hasClass("active")) {
@@ -16,14 +70,7 @@ $(function(){
         }
     });
 
-    $(".desc-gallery").owlCarousel({
-        jsonPath : "json/womenGallery.json"
-    });
 
-
-   /*$("body").mCustomScrollbar({
-        theme:"minimal"
-    });*/
     var s = Snap("#Capa_1");
     var timeline = s.rect(52, 92, 16, 60);
     var rect = s.rect(35, 120, 50, 15);
@@ -50,57 +97,41 @@ $(function(){
         fill: "#fff"
     });
 
-    $('#femaleSymbol').click(function(){
 
-        $('.subtle').fadeOut();
-        $('#main-content').delay(1000).fadeIn();
-        $('.sideBar').fadeIn();
-        $('.title_head').animate({
-           margin : '0% auto'
-        },1000);
-        setTimeout(function(){
-            s.animate({
-                height: 1900
-            }, 1000);
-            timeline.animate({
-                height: 1900
-            }, 1000);
-            $('#femaleSymbol').delay(1000).removeClass('levitate');
-        }, 500);
+    /*slidr*/
+    $('.responsiveSlider').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
-    /*carousel men women*/
-
-    $(".men-slider").owlCarousel({
-        jsonPath : "json/men.json"
-    });
-
-    $(".women-slider").owlCarousel({
-        jsonPath : "json/women.json"
-    });
-
-
-    /*D3 Data
-
-    var diameter = 960,
-        format = d3.format(",d"),
-        color = d3.scale.category20c();
-
-    var bubble = d3.layout.pack()
-        .sort(null)
-        .size([diameter, diameter])
-        .padding(1.5);
-
-    var svg = d3.select(".stats-ciwo").append("svg")
-        .attr("width", diameter)
-        .attr("height", diameter)
-        .attr("class", "bubble");
-
-    d3.json("json/60data.json",  function(error, root){
-        var nod = svg.selectAll(".node")
-            .data(bubble.nodes(classes(root)))
-            .filter(function(d))
-    });*/
-
-
-
 });
