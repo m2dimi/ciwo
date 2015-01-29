@@ -14,17 +14,6 @@
   margin: 0 auto;
   display: table;
 }
-
-.centerKit{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: -translate(-50%, -50%);
-}
 .no-padding{
   padding: 0 !important;
 }
@@ -77,46 +66,22 @@
 }
 /*-----------Header--------------*/
 body {
+  background: url(img/bg_ciwo.jpg) center center fixed;
+  background-size: cover;
+  //overflow: hidden !important;
+  height: 100vh !important;
   font-family: 'century gothic', "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif;
 }
-
-#ascensorBuilding{
-  background: url('img/bg_ciwo.jpg') center fixed no-repeat;
-  background-size: cover;
-}
-
-ul {
-  list-style: none;
-  li{
-    a{
-      padding: 3px 6px;
-      display: inline-block;
-      background: #eee;
-      border-radius:3px;
-      margin-bottom:2px;
-      color: #777;
-      &:hover{
-        cursor:pointer;
-        background:#fefefe;
-      }
-    }
-  }
-}
-
-.links-to-floor{position: absolute;top: 20px;left: 20px;}
-.prev-next-links{position: absolute;top: 20px;right: 20px;}
-.direction-links li a{border-radius: 0;}
-.up {position: absolute;bottom: 75px;right: 50px;}
-.down {position: absolute;bottom: 25px;right: 50px;}
-.left {position: absolute;bottom: 50px;right: 60px;}
-.right {position: absolute;bottom: 50px;right: 32px;}
-.selected a{color: white;background:#4fade3;}
-.selected a:hover{color: white;background:#4fade3;}
-
-/*Accueil*/
-#acc_head{
-  width: 570px;
+/*Timeline*/
+.title_head{
   display: table;
+  margin: 18% auto 0;
+  position: relative;
+  /*position: absolute;
+  top: 50%;
+  margin-top: -650px;
+  left: 50%;
+  margin-left: -275px;*/
   h1{
     .lighter{font-weight: lighter; color: @yellow;}
     color: #ffffff;
@@ -125,7 +90,18 @@ ul {
     float: left;
     margin-left: 78px;
   }
-  #femaleSymbol{display: block;}
+  .arrowDown{
+    margin-top: 24px;
+    text-decoration: none;
+    color: #ffffff;
+    display: table;
+    float: left;
+    font-size: 130px;
+    font-weight: bold;
+  }
+  #timeline{
+    .Transition;
+  }
 }
 
 .subtle{
@@ -135,61 +111,8 @@ ul {
   letter-spacing: 3px;
   p{font-style: italic;}
 }
-
-
-/*Line*/
-.floor-2{
-  overflow: hidden !important;
+.timy{
 }
-#timeline{
-  position: relative;
-  #line{
-    position: absolute;
-    top: 200px;
-    left: 49%;
-    width: 10px;
-    height: 150vh;
-    background: #ffffff;
-    -webkit-transform: translate(50%);
-    -moz-transform: translate(50%);
-    -ms-transform: translate(50%);
-    -o-transform: translate(50%);
-    transform: translate(50%);
-    .decoCircle{
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      border: 10px solid #fff;
-      top: -145px;
-      left: -68px;
-      border-radius: 50%;
-    }
-  }
-}
-
-#contentLine{
-  padding: 0;
-  margin-top: 30%;
-  h3 {
-    margin: 0;
-    margin-bottom: 10px;
-    color: #ffffff;
-    text-align: center;
-  }
-
-}
-
-
-/*Slider*/
-.responsiveSlider{
-  img{
-    margin-right: 10px;
-    border-radius: 5px;
-  }
-}
-
-
-/*Sidebar*/
 .sideBar{
   display: none;
   position: fixed;
@@ -253,20 +176,88 @@ ul {
     bottom: 30px;
     width: 100%;
   }
-
-}
-
-.gender{
-  background: rgba(255,255,255,0.5);
-  height: 120px;
-  border-radius: 50%;
-  margin-top: 36px;
+  .gender{
+    float: left;
+    span{
+      text-align: center;
+      font-style: italic;
+      display: block;
+      margin: 10px 0;
+      color: #fff;
+    }
+    .circleGender{
+      width: 70px;
+      height: 70px; margin: 0 10px;
+      border-radius: 50%;
+    }
+    #man{
+      background: @yellow;
+    }
+    #woman{
+      border: 10px solid #fff;
+    }
+  }
 }
 
 /*-----------Content--------------*/
 
+#main-content{
+  display: none;
+  position: absolute;
+  top: 15%;
+  left: -65px;
+  .men-slider, .women-slider{
+    //background: rgba(255,255,255,0.7);
+    height: 150px;
+    margin-bottom: 25px;
+  }
+  .stats-ciwo{
+  border-radius: 50%;
+    height: 150px;
+    background: rgba(255,255,255,0.5);
+  }
+
+}
 
 /*-----------Footer--------------*/
+.list-gender{
+  padding: 0;
+  li{
+    list-style-type: none;
+    .Transition;
+    .stats-ciwo{
+      opacity: 0.5;
+      .Transition;
+    }
+    &:hover{
+      .stats-ciwo{
+        opacity: 1;
+      }
+    }
+    .owl-carousel{
+      .Transition;
+      opacity: 0 !important;
+    }
+  }
+  .active-gender{
+    .Transition;
+    .owl-carousel{
+     opacity: 1!important;
+    }
+    .stats-ciwo{
+      opacity: 1;
+    }
+  }
+  .owl-carousel .owl-item{
+    width: 100px !important;
+    margin-right: 10px;
+    img{
+      border-radius: 5px;
+    }
+  }
+}
+
+
 
 
 /*Detailed content*/
