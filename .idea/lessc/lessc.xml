@@ -9,13 +9,13 @@
               <option name="cssDirectories">
                 <list>
                   <CssDirectory>
-                    <option name="path" value="C:\Users\Miko\Documents\ciwo\css" />
+                    <option name="path" value="C:\Users\Miko\Documents\Ciwo-Interface\css" />
                   </CssDirectory>
                 </list>
               </option>
               <option name="id" value="0" />
-              <option name="lessDirPath" value="C:\Users\Miko\Documents\ciwo\css" />
-              <option name="name" value="LessyCiwo" />
+              <option name="lessDirPath" value="C:\Users\Miko\Documents\Ciwo-Interface\css" />
+              <option name="name" value="Lassy" />
             </LessProfile>
           </value>
         </entry>
