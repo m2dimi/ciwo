@@ -18,6 +18,16 @@ $(function(){
             $(this).parent().addClass("activeLi");
         }
     });
+
+    $(".genderBlock").click(function(){
+        // If this isn't already active
+        if (!$(this).parent().hasClass("activeLi")) {
+            // Remove the class from anything that is active
+            $("li.activeLi").removeClass("activeLi");
+            // And make this active
+            $(this).parent().addClass("activeLi");
+        }
+    });
     $("#femaleSymbol").click(function(){
         $("#line").animate({
             height : '150vh'

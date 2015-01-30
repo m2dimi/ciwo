@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CIWO_Interface_STYM.iml" filepath="$PROJECT_DIR$/.idea/CIWO_Interface_STYM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Ciwo-Interface.iml" filepath="$PROJECT_DIR$/.idea/Ciwo-Interface.iml" />
     </modules>
   </component>
 </project>

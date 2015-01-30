@@ -12,6 +12,18 @@
   margin: 0 auto;
   display: table;
 }
+a {
+  text-decoration: none !important;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+a:hover {
+  color: #ffec04 !important;
+}
 .centerKit {
   position: absolute;
   left: 50%;
@@ -162,6 +174,10 @@ ul li a:hover {
   background: #4fade3;
 }
 /*Accueil*/
+.lighter {
+  font-weight: lighter;
+  color: #ffec04;
+}
 #acc_head {
   width: 570px;
   display: table;
@@ -172,10 +188,6 @@ ul li a:hover {
   letter-spacing: 10px;
   float: left;
   margin-left: 78px;
-}
-#acc_head h1 .lighter {
-  font-weight: lighter;
-  color: #ffec04;
 }
 #acc_head #femaleSymbol {
   display: block;
@@ -267,6 +279,29 @@ ul li a:hover {
 .responsiveSlider img {
   margin-right: 10px;
   border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.responsiveSlider .activeBoard {
+  border-radius: 15px;
+}
+.asideSection h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 70px;
+}
+.returnWomen {
+  display: table;
+  margin: 100% 30px;
+  font-size: 50px;
+  color: #fff;
+}
+.detailedContent {
+  margin-top: 10%;
 }
 /*Sidebar*/
 .sideBar {

@@ -14,7 +14,14 @@
   margin: 0 auto;
   display: table;
 }
-
+a{
+  text-decoration: none !important;
+  color: #fff;
+  .Transition;
+  &:hover{
+    color: @yellow !important;
+  }
+}
 .centerKit{
   position: absolute;
   left: 50%;
@@ -114,11 +121,11 @@ ul {
 .selected a:hover{color: white;background:#4fade3;}
 
 /*Accueil*/
+.lighter{font-weight: lighter; color: @yellow;}
 #acc_head{
   width: 570px;
   display: table;
   h1{
-    .lighter{font-weight: lighter; color: @yellow;}
     color: #ffffff;
     font-size: 130px;
     letter-spacing: 10px;
@@ -206,10 +213,29 @@ ul {
   img{
     margin-right: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    .Transition;
+  }
+  .activeBoard{
+    border-radius: 15px;
   }
 }
-
-
+.asideSection{
+  h1{
+    color: #fff;
+    text-align: center;
+    font-size: 70px;
+  }
+}
+.returnWomen{
+  display: table;
+  margin: 100% 30px;
+  font-size: 50px;
+  color: #fff;
+}
+.detailedContent{
+  margin-top: 10%;
+}
 /*Sidebar*/
 .sideBar{
   display: none;
