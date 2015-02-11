@@ -7,9 +7,91 @@ $(function(){
         $('body').delay(350).css({'overflow':'visible'});
     });
 
+    function reload(result){
+        $(".movie-title").text(result.title);
+        $(".movie-year").text(result.year);
+        $(".movie-actors").text(result.stars);
+    }
 
-<<<<<<< HEAD
-=======
+    var owl = $(".sliding");
+    owl.owlCarousel({
+        jsonPath : 'json/ciwoData.json',
+        jsonSuccess : customDataSuccess,
+        items : 3
+    });
+
+    function customDataSuccess(data){
+        var content = "";
+        for(var i in data["ciwo"]){
+
+            var img = data["ciwo"][i].jpbox;
+            if( data["ciwo"][i].year == '1950' &&  data["ciwo"][i].presenceFemme == 'non'){
+                content += "<img src=" +img+ ">"
+            }
+        }
+        owl.html(content);
+    }
+    $(".nexty").click(function(){
+        owl.trigger('owl.next');
+    });
+    $(".prevy").click(function(){
+        owl.trigger('owl.prev');
+    });
+
+    // Custom Navigation Events
+
+
+    // Custom Navigation Events
+ /*   $('.left_scroll').each(
+        function(){
+            $(this).bind (
+                "click",
+                function(event){
+                    $('.customCarousel').animate({
+                        'left' : '+=130px'
+                    });
+                }
+            );
+        }
+    );
+
+    $('.right_scroll').each(
+        function(){
+            $(this).bind (
+                "click",
+                function(event){
+                    $('.customCarousel').animate({
+                        'left' : '-=130px'
+                    });
+                    $('.left_scroll').fadeIn();
+                }
+            );
+        }
+    );
+*/
+
+
+    $.getJSON("json/ciwoData.json", function(data) {
+        console.log(data);
+        $.each(data, function(i, result){
+            /*
+             $.each(data, function(i, result){
+             $.each(result.year, function(j, dataYear){
+             if(result.presenceFemme == 'non'){
+             $("#1950Women").append('<img width="130" src="' + result.jpbox + '"/>');
+             }
+             });
+
+             });
+            }*/
+
+
+            if(result.year == '1950' && result.presenceFemme == 'non'){
+                $("#1950Women").append('<div class="item"><img width="130" src="' + result.jpbox + '"/></div>');
+            }
+        });
+    });
+
     // When we click on the LI
     $(".genderBlock").click(function(){
         // If this isn't already active
@@ -21,16 +103,8 @@ $(function(){
         }
     });
 
-    $(".genderBlock").click(function(){
-        // If this isn't already active
-        if (!$(this).parent().hasClass("activeLi")) {
-            // Remove the class from anything that is active
-            $("li.activeLi").removeClass("activeLi");
-            // And make this active
-            $(this).parent().addClass("activeLi");
-        }
-    });
     $("#femaleSymbol").click(function(){
+        $(".ciwo-fixed").fadeIn();
         $("#line").animate({
             height : '150vh'
         }, 2000);
@@ -81,22 +155,12 @@ $(function(){
             $(this).addClass("active-gender");
         }
     });
->>>>>>> origin/gh-pages
 
 
     var s = Snap("#Capa_1");
     var timeline = s.rect(52, 92, 16, 60);
     var rect = s.rect(35, 120, 50, 15);
     var circle =  s.circle(60, 60, 40);
-
-    /*var rect1 =  s.rect(35, 200, 50, 15);
-        rect2 =  s.rect(35, 250, 50, 15);
-        rect3 =  s.rect(35, 300, 50, 15);
-        rect4 =  s.rect(35, 350, 50, 15);
-        rect5 =  s.rect(35, 400, 50, 15);
-        rect6 =  s.rect(35, 450, 50, 15);
-        rect7 =  s.rect(35, 500, 50, 15);*/
-
 
     circle.attr({
         fill: "none",
@@ -111,49 +175,5 @@ $(function(){
     });
 
 
-    /*slidr*/
-    $('.responsiveSlider').slick({
-        dots: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-        ]
-    });
-<<<<<<< HEAD
 
-
-
-
-
-
-=======
->>>>>>> origin/gh-pages
 });
