@@ -7,6 +7,9 @@ $(function(){
         $('body').delay(350).css({'overflow':'visible'});
     });
 
+
+
+
     var s = Snap("#Capa_1");
     var timeline = s.rect(52, 92, 16, 60);
     var rect = s.rect(35, 120, 50, 15);
@@ -51,6 +54,7 @@ $(function(){
             $('#femaleSymbol').delay(1000).removeClass('levitate');
         }, 500);
     });
+
 
 
 
