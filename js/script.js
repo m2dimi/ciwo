@@ -13,6 +13,7 @@ $(function(){
         $(".movie-actors").text(result.stars);
     }
 
+<<<<<<< HEAD
     $.getJSON("json/ciwoData.json", function(data) {
         console.log(data);
         var years_box = $('#years');
@@ -24,6 +25,97 @@ $(function(){
     });
 
 
+=======
+    var owl = $(".sliding");
+    owl.owlCarousel({
+        jsonPath : 'json/ciwoData.json',
+        jsonSuccess : customDataSuccess,
+        items : 3
+    });
+
+    function customDataSuccess(data){
+        var content = "";
+        for(var i in data["ciwo"]){
+
+            var img = data["ciwo"][i].jpbox;
+            if( data["ciwo"][i].year == '1950' &&  data["ciwo"][i].presenceFemme == 'non'){
+                content += "<img src=" +img+ ">"
+            }
+        }
+        owl.html(content);
+    }
+    $(".nexty").click(function(){
+        owl.trigger('owl.next');
+    });
+    $(".prevy").click(function(){
+        owl.trigger('owl.prev');
+    });
+
+    // Custom Navigation Events
+
+
+    // Custom Navigation Events
+ /*   $('.left_scroll').each(
+        function(){
+            $(this).bind (
+                "click",
+                function(event){
+                    $('.customCarousel').animate({
+                        'left' : '+=130px'
+                    });
+                }
+            );
+        }
+    );
+
+    $('.right_scroll').each(
+        function(){
+            $(this).bind (
+                "click",
+                function(event){
+                    $('.customCarousel').animate({
+                        'left' : '-=130px'
+                    });
+                    $('.left_scroll').fadeIn();
+                }
+            );
+        }
+    );
+*/
+
+
+    $.getJSON("json/ciwoData.json", function(data) {
+        console.log(data);
+        $.each(data, function(i, result){
+            /*
+             $.each(data, function(i, result){
+             $.each(result.year, function(j, dataYear){
+             if(result.presenceFemme == 'non'){
+             $("#1950Women").append('<img width="130" src="' + result.jpbox + '"/>');
+             }
+             });
+
+             });
+            }*/
+
+
+            if(result.year == '1950' && result.presenceFemme == 'non'){
+                $("#1950Women").append('<div class="item"><img width="130" src="' + result.jpbox + '"/></div>');
+            }
+        });
+    });
+
+    // When we click on the LI
+    $(".genderBlock").click(function(){
+        // If this isn't already active
+        if (!$(this).parent().hasClass("activeLi")) {
+            // Remove the class from anything that is active
+            $("li.activeLi").removeClass("activeLi");
+            // And make this active
+            $(this).parent().addClass("activeLi");
+        }
+    });
+>>>>>>> origin/gh-pages
 
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
