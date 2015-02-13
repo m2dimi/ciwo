@@ -13,16 +13,17 @@ $(function(){
         $(".movie-actors").text(result.stars);
     }
 
-    $.getJSON("json/ciwoData.json", function(data) {
-        console.log(data);
-        var years_box = $('#years');
 
-        $.each(data, function(i, result){
-            var yearData = data[i].year;
-            years_box.append('<div class="year">'+ yearData +'</div>');
-        })
-    });
 
+    $.getJSON("json/ciwoData.json",function(data)
+        {
+            $.each(data.ciwo, function(i,data)
+            {
+                var div_data = '<div class="year">'+ data.year +'</div>';
+                $(div_data).appendTo("#years");
+            });
+        }
+    );
 
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
