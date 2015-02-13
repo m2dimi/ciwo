@@ -24,7 +24,6 @@ $(function(){
     });
 
 
-
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
         $("#line").animate({
