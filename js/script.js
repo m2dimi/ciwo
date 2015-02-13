@@ -16,10 +16,10 @@ $(function(){
     $.getJSON("json/ciwoData.json", function(data) {
         console.log(data);
         var years_box = $('#years');
-        var yearData = data.year;
 
         $.each(data, function(i, result){
-            years_box.append('<div class="year">'+ result.yearData +'</div>');
+            var yearData = data[i].year;
+            years_box.append('<div class="year">'+ yearData +'</div>');
         })
     });
 
