@@ -1,6 +1,6 @@
 {
   "owl" : [
-    {"item" : "<span class='item'><a href='detailed.html'><img src='css/img/men-slider/8.jpg'/></a></span>"},
+    {"item" : "<span class='item'><a href='#detailled'><img src='css/img/men-slider/8.jpg'/></a></span>"},
     {"item" : "<span class='item'><img src='css/img/men-slider/3.jpg'/></span>"},
     {"item" : "<span class='item'><img src='css/img/men-slider/4.jpg'/></span>"},
     {"item" : "<span class='item'><img src='css/img/men-slider/5.jpg'/></span>"},

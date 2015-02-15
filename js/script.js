@@ -6,6 +6,68 @@ $(function(){
         $('#preloader').delay(500).fadeOut('slow');
         $('body').delay(350).css({'overflow':'visible'});
     });
+
+    function reload(result){
+        $(".movie-title").text(result.title);
+        $(".movie-year").text(result.year);
+        $(".movie-actors").text(result.stars);
+    }
+
+
+
+    $.getJSON("json/ciwoData.json",function(data)
+        {
+            $.each(data.ciwo, function(i,data)
+            {
+                var div_data = '<div class="year">'+ data.year +'</div>';
+                $(div_data).appendTo("#years");
+            });
+        }
+    );
+
+    $("#femaleSymbol").click(function(){
+        $(".ciwo-fixed").fadeIn();
+        $("#line").animate({
+            height : '150vh'
+        }, 2000);
+        $("#contentLine").delay(1000).animate({
+            opacity : 1
+        }, 1000);
+    });
+
+
+    /*Ascensor Plugin*/
+    var ascensor = $('#ascensorBuilding').ascensor({
+        direction: [[0,1],[1,1],[1,0],[1,2],[1,1],[1,2],[2,0],[2,1]],
+        time: 300
+    });
+    var ascensorInstance = $('#ascensorBuilding').data('ascensor');
+    $(".links-to-floor li").click(function(event, index) {
+        ascensorInstance.scrollToFloor($(this).index());
+    });
+
+    $(".links-to-floor li:eq("+ ascensor.data("current-floor") +")").addClass("selected");
+
+    ascensor.on("scrollStart", function(event, floor){
+        $(".links-to-floor li").removeClass("selected");
+        $(".links-to-floor li:eq("+floor.to+")").addClass("selected");
+    });
+
+    $(".prev").click(function() {
+        ascensorInstance.prev();
+    });
+
+    $(".next").click(function() {
+        ascensorInstance.next();
+    });
+
+    $(".direction").click(function() {
+        ascensorInstance.scrollToDirection($(this).data("direction"));
+    });
+
+    $('.floor-2').perfectScrollbar({suppressScrollX: true});
+
+
     $(".list-gender li").click(function(){
         // If this isn't already active
         if (!$(this).hasClass("active")) {
@@ -16,27 +78,11 @@ $(function(){
         }
     });
 
-    $(".desc-gallery").owlCarousel({
-        jsonPath : "json/womenGallery.json"
-    });
 
-
-   /*$("body").mCustomScrollbar({
-        theme:"minimal"
-    });*/
     var s = Snap("#Capa_1");
     var timeline = s.rect(52, 92, 16, 60);
     var rect = s.rect(35, 120, 50, 15);
     var circle =  s.circle(60, 60, 40);
-
-    /*var rect1 =  s.rect(35, 200, 50, 15);
-        rect2 =  s.rect(35, 250, 50, 15);
-        rect3 =  s.rect(35, 300, 50, 15);
-        rect4 =  s.rect(35, 350, 50, 15);
-        rect5 =  s.rect(35, 400, 50, 15);
-        rect6 =  s.rect(35, 450, 50, 15);
-        rect7 =  s.rect(35, 500, 50, 15);*/
-
 
     circle.attr({
         fill: "none",
@@ -49,57 +95,6 @@ $(function(){
     rect.attr({
         fill: "#fff"
     });
-
-    $('#femaleSymbol').click(function(){
-
-        $('.subtle').fadeOut();
-        $('#main-content').delay(1000).fadeIn();
-        $('.sideBar').fadeIn();
-        $('.title_head').animate({
-           margin : '0% auto'
-        },1000);
-        setTimeout(function(){
-            s.animate({
-                height: 1900
-            }, 1000);
-            timeline.animate({
-                height: 1900
-            }, 1000);
-            $('#femaleSymbol').delay(1000).removeClass('levitate');
-        }, 500);
-    });
-    /*carousel men women*/
-
-    $(".men-slider").owlCarousel({
-        jsonPath : "json/men.json"
-    });
-
-    $(".women-slider").owlCarousel({
-        jsonPath : "json/women.json"
-    });
-
-
-    /*D3 Data
-
-    var diameter = 960,
-        format = d3.format(",d"),
-        color = d3.scale.category20c();
-
-    var bubble = d3.layout.pack()
-        .sort(null)
-        .size([diameter, diameter])
-        .padding(1.5);
-
-    var svg = d3.select(".stats-ciwo").append("svg")
-        .attr("width", diameter)
-        .attr("height", diameter)
-        .attr("class", "bubble");
-
-    d3.json("json/60data.json",  function(error, root){
-        var nod = svg.selectAll(".node")
-            .data(bubble.nodes(classes(root)))
-            .filter(function(d))
-    });*/
 
 
 
