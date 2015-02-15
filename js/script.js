@@ -17,9 +17,35 @@ $(function(){
 
     $.getJSON("json/ciwoData.json",function(data)
         {
+            var data_groups = {},
+                years = [];
+
+            for(var j=0; j<data.ciwo.length; j++) {
+                if(!data_groups[data.ciwo[j].year]) {
+                    data_groups[data.ciwo[j].year] = {
+                        d: [],
+                        y: data.ciwo[j].year,
+                        count: 0
+                    };
+                }
+                data_groups[data.ciwo[j].year].count++;
+                data_groups[data.ciwo[j].year].d.push(data.ciwo[j]);
+            }
+
+            // rebuilding the year list
+            for(var k in data_groups) {
+                years.push(data_groups[k])
+            }
+            console.log('unsorted', years);
+            // sort years
+            years.sort(function(a,b) {
+                return a.y > b.y?-1:1
+            });
+            console.log('sorted', years);
+
             $.each(data.ciwo, function(i,data)
             {
-                var div_data = '<div class="year">'+ data.year +'</div>';
+                var div_data = '<div class="year"><span class="date">'+  +'</span></div>';
                 $(div_data).appendTo("#years");
             });
         }
@@ -28,9 +54,9 @@ $(function(){
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
         $("#line").animate({
-            height : '150vh'
+            height : 'auto'
         }, 2000);
-        $("#contentLine").delay(1000).animate({
+        $("#years").delay(200).animate({
             opacity : 1
         }, 1000);
     });
