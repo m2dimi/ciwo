@@ -7,11 +7,6 @@ $(function(){
         $('body').delay(350).css({'overflow':'visible'});
     });
 
-    function reload(result){
-        $(".movie-title").text(result.title);
-        $(".movie-year").text(result.year);
-        $(".movie-actors").text(result.stars);
-    }
 
 
 
@@ -25,6 +20,8 @@ $(function(){
                     data_groups[data.ciwo[j].year] = {
                         d: [],
                         y: data.ciwo[j].year,
+                        img: data.ciwo[j].jpbox,
+                        woman : data.ciwo[j].presenceFemme,
                         count: 0
                     };
                 }
@@ -43,10 +40,22 @@ $(function(){
             });
             console.log('sorted', years);
 
-            $.each(data.ciwo, function(i,data)
+            $.each(years, function(i,data)
             {
-                var div_data = '<div class="year"><span class="date">'+  +'</span></div>';
+                var div_data = '<div class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="col-md-2"><span class="date">'+ data.y +'</span></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></div>';
                 $(div_data).appendTo("#years");
+                if(data.woman == 'oui'){
+                    var afficheWo = '<div class="affiche"><img src="'+ data.img +'"/></div>';
+                    $(afficheWo).appendTo(".women .largeWrap");
+                }else{
+                    var afficheMen = '<div class="affiche"><img src="'+ data.img +'"/></div>';
+                    $(afficheMen).appendTo(".men .largeWrap");
+                }
+
+            });
+            $.each(years, function(j,data)
+            {
+
             });
         }
     );
@@ -54,8 +63,8 @@ $(function(){
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
         $("#line").animate({
-            height : 'auto'
-        }, 2000);
+            height : '10000px'
+        }, 5000);
         $("#years").delay(200).animate({
             opacity : 1
         }, 1000);

@@ -154,8 +154,8 @@ ul {
     position: absolute;
     top: 200px;
     left: 49%;
-    width: 10px;
-    height: auto;
+    width: 5px;
+    height: 0;
     background: #ffffff;
     -webkit-transform: translate(50%);
     -moz-transform: translate(50%);
@@ -169,7 +169,7 @@ ul {
     height: 150px;
     border: 10px solid #fff;
     top: 60px;
-    left: 50%;
+    left: 49.5%;
     -webkit-transform: translate(-50%);
     -moz-transform: translate(-50%);
     -ms-transform: translate(-50%);
@@ -374,20 +374,31 @@ ul {
 }
 
 #years{
-  display: table;
+  margin-top: 250px;
   opacity: 0;
   .Transition;
   margin-left: -20px;
   .year{
-    background: #fff;
-    width: 50px;
-    height: 50px;
-    margin: 25px 0;
-    border-radius: 50%;
-    .date{
-      display: table;
-      margin: 0 auto;
-      padding-top: 14px;
+    div{
+      position: relative;
+      .date{
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        margin: 25px auto;
+        border-radius: 50%;
+        display: table;
+        text-align: center;
+        padding-top: 14px;
+      }
+    }
+    .slider{
+      overflow: hidden;
+      .largeWrap{
+        display: table;
+        width: 99999px;
+        .affiche{float: left; margin-right: 15px;}
+      }
     }
   }
 }
