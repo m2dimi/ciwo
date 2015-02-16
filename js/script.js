@@ -59,9 +59,10 @@ $(function(){
                     }
                 });
 
-
-
                 if(data.woman == 'oui'){
+                    var sortedImage = [];
+                    sortedImage.sort();
+
                     var afficheWo = '<div class="affiche"><a class="direction" data-direction="left" href="#0"><img src="'+ data.img +'"/></a></div>';
                     $(afficheWo).appendTo(".women .largeWrap");
                 }else{
@@ -78,7 +79,7 @@ $(function(){
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
         $("#line").animate({
-            height : '10000px'
+            height : '13000px'
         }, 5000);
         $("#years").delay(1000).animate({
             opacity : 1
