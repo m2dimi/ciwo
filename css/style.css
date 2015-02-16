@@ -443,6 +443,17 @@ ul li a:hover {
   transition: 0.3s;
   margin-left: -20px;
 }
+#years .activeYear .slider {
+  opacity: 1 !important;
+}
+#years .year .slider {
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
 #years .year div {
   position: relative;
 }
@@ -466,6 +477,9 @@ ul li a:hover {
 #years .year .slider .largeWrap .affiche {
   float: left;
   margin-right: 15px;
+}
+#years .year .slider .largeWrap .affiche img {
+  border-radius: 10px;
 }
 /*-----------MediaQueries--------------*/
 @media screen and (max-width: 1366px) {

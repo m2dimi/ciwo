@@ -42,21 +42,36 @@ $(function(){
 
             $.each(years, function(i,data)
             {
-                var div_data = '<div class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="col-md-2"><span class="date">'+ data.y +'</span></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></div>';
+                //Affichage des années
+                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="col-md-2"><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
                 $(div_data).appendTo("#years");
+                $("li.year").first().addClass("activeYear");
+
+
+                // When we click on the LI
+                $(".year").click(function(){
+                    // If this isn't already active
+                    if (!$('this').hasClass("activeYear")) {
+                        // Remove the class from anything that is active
+                        $("li.activeYear").removeClass("activeYear");
+                        // And make this active
+                        $(this).addClass("activeYear");
+                    }
+                });
+
+
+
                 if(data.woman == 'oui'){
-                    var afficheWo = '<div class="affiche"><img src="'+ data.img +'"/></div>';
+                    var afficheWo = '<div class="affiche"><a class="direction" data-direction="left" href="#0"><img src="'+ data.img +'"/></a></div>';
                     $(afficheWo).appendTo(".women .largeWrap");
                 }else{
-                    var afficheMen = '<div class="affiche"><img src="'+ data.img +'"/></div>';
+                    var afficheMen = '<div class="affiche"><a class="direction" data-direction="right" href="#0"><img src="'+ data.img +'"/></a></div>';
                     $(afficheMen).appendTo(".men .largeWrap");
                 }
 
             });
-            $.each(years, function(j,data)
-            {
 
-            });
+
         }
     );
 
@@ -65,9 +80,9 @@ $(function(){
         $("#line").animate({
             height : '10000px'
         }, 5000);
-        $("#years").delay(200).animate({
+        $("#years").delay(1000).animate({
             opacity : 1
-        }, 1000);
+        });
     });
 
 
@@ -103,7 +118,7 @@ $(function(){
     $('.floor-2').perfectScrollbar({suppressScrollX: true});
 
 
-    $(".list-gender li").click(function(){
+    $(".date").click(function(){
         // If this isn't already active
         if (!$(this).hasClass("active")) {
             // Remove the class from anything that is active

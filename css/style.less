@@ -378,7 +378,16 @@ ul {
   opacity: 0;
   .Transition;
   margin-left: -20px;
+  .activeYear{
+    .slider{
+      opacity: 1 !important;;
+    }
+  }
   .year{
+    .slider{
+      opacity: 0;
+      .Transition;
+    }
     div{
       position: relative;
       .date{
@@ -397,7 +406,13 @@ ul {
       .largeWrap{
         display: table;
         width: 99999px;
-        .affiche{float: left; margin-right: 15px;}
+        .affiche{
+          float: left;
+          margin-right: 15px;
+          img{
+            border-radius: 10px;
+          }
+        }
       }
     }
   }
