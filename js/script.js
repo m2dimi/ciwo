@@ -45,12 +45,10 @@ $(function(){
                 //Affichage des années
                 var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="col-md-2"><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
                 $(div_data).appendTo("#years");
+
+
                 $("li.year").first().addClass("activeYear");
-
-
-                // When we click on the LI
                 $(".year").click(function(){
-                    // If this isn't already active
                     if (!$('this').hasClass("activeYear")) {
                         // Remove the class from anything that is active
                         $("li.activeYear").removeClass("activeYear");
@@ -59,18 +57,22 @@ $(function(){
                     }
                 });
 
-                if(data.woman == 'oui'){
-                    var sortedImage = [];
-                    sortedImage.sort();
+                $(".date").click(function(){
+                    var currentYear = $(this).html();
 
-                    var afficheWo = '<div class="affiche"><a class="direction" data-direction="left" href="#0"><img src="'+ data.img +'"/></a></div>';
-                    $(afficheWo).appendTo(".women .largeWrap");
-                }else{
-                    var afficheMen = '<div class="affiche"><a class="direction" data-direction="right" href="#0"><img src="'+ data.img +'"/></a></div>';
-                    $(afficheMen).appendTo(".men .largeWrap");
-                }
+                    if(currentYear == data.y && data.woman == 'oui'){
+                        var afficheWo = '<div class="affiche"><a class="direction" data-direction="left" href="#0"><img src="'+ data.img +'"/></a></div>';
+                        $(afficheWo).appendTo(".women .largeWrap");
+                    }else{
+                        var afficheMen = '<div class="affiche"><a class="direction" data-direction="right" href="#0"><img src="'+ data.img +'"/></a></div>';
+                        $(afficheMen).appendTo(".men .largeWrap");
+                    }
+                });
+
 
             });
+
+
 
 
         }
