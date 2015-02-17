@@ -56,7 +56,7 @@ $(function(){
                 var valMen = Math.round(menPercent);
                 var valWomen = Math.round(womenPercent);
 
-                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="contentDate col-md-2"><div class="percentWomen" style="width: '+ valWomen +'px; height: '+ valWomen +'px;"><span>'+valWomen+'</span></div><a class="date">'+ data.y +'</a><div class="percentMen" style="width: '+ valMen +'px; height: '+ valMen +'px;"><span>'+valMen+'</span></div></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
+                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="contentDate col-md-2"><div class="percent"><div class="percentWomen" style="width: '+ valWomen +'px; height: '+ valWomen +'px;"><span>'+valWomen+'</span></div><div class="percentMen" style="width: '+ valMen +'px; height: '+ valMen +'px;"><span>'+valMen+'</span></div></div><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
                 $(div_data).appendTo("#years");
 
 
