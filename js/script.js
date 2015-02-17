@@ -60,14 +60,14 @@ $(function(){
 
                 var div_data =
                     '<li class="year col-md-12">' +
-                        '<div class="men col-md-4">'+
+                        '<div class="men col-md-5">'+
                             '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
                             '<div class="slider">' +
                                 '<div class="largeWrap"></div>' +
                             '</div>' +
                             '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                         '</div>'+
-                        '<div class="contentDate col-md-4">' +
+                        '<div class="contentDate col-md-2">' +
                             '<div class="percent">' +
                                 '<div class="percentMen" style="width: '+ valMen +'px; height: '+ valMen +'px;">' +
                                     '<span class="spanPercent-men">'+valMen+'%</span>' +
@@ -78,7 +78,7 @@ $(function(){
                         '</div>' +
                         '<a class="date">'+ data.y +'</a>' +
                         '</div>' +
-                        '<div class="women col-md-4">'+
+                        '<div class="women col-md-5">'+
                             '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
                             '<div class="slider">' +
                                 '<div class="largeWrap"></div>' +
