@@ -45,3 +45,10 @@ Logo: Ci comme Cinéma et WO comme Women avec le symbole du féminin.
 Difficultés rencontrées lors de la définition des critères de sélection :
 Problématique de la sélection de la place de la femme sur l’affiche ou dans le film.
 Au départ, nous voulions mettre en avant différents critères pour déterminer le côté guerrière de l’héroïne (posture, présence d’arme, environnement, seule ou accompagnée, gros plan…). Mais nous nous sommes rendus compte que ces critères étaient trop subjectifs et pas assez significatifs. En effet, il existe des affiches qui ne remplissent aucun de ces critères. Par conséquent, nous avons choisi de définir le critère de “l’héroïne” par la présence de la femme sur l’affiche en intégrant dans la base de données une colonne “Présence femme” et en la remplissant par oui ou pas non. 
+
+Techniques utilisées :
+- HTML5, CSS3
+- Librairies : Jquery, D3.js, snap.svg
+- Plugins : ascensor.js
+- Framework : Bootstrap
+- Preprocesseur : Less
