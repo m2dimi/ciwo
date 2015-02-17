@@ -8,6 +8,8 @@ $(function(){
     });
 
 
+    $('#myModal').modal('hide');
+
 
 
     $.getJSON("json/ciwoData.json",function(data)
@@ -92,7 +94,7 @@ $(function(){
                 /*for(var j in data.d) {
                     console.log('YEAR: ', data.y, ', film ', data.d[j].title, ' avec femme: ',data.d[j].presenceFemme)
                 }*/
-                
+
                 $("li.year").first().addClass("activeYear");
                 $(".year").click(function(){
                     if (!$('this').hasClass("activeYear")) {

@@ -17,7 +17,40 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body>
-		<h1 class="ciwo-fixed"><span class="lighter">CI</span><b>W</b>O</h1>
+		<div id="sideC" class="ciwo-fixed">
+			<h1><span class="lighter">CI</span><b>W</b>O</h1>
+			<!-- Button trigger modal -->
+			<button class="ciwoAbout" data-toggle="modal" data-target="#myModal">
+				A propos
+			</button>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel" class="text-center">Qu'est ce que CIWO ?</h4>
+					</div>
+					<div class="modal-body">
+						<p class="text-justify">CIWO est un projet universitaire réunissant 4 étudiants (Sophie, Marine, Tony et Yannick)  du Master Design d’Interface Multimédia et Internet.<br/><br/>
+						Dans cette interface nous avons souhaité mettre en avant la place de la femme dans les affiches de films.
+						<br/>
+						<br/>
+						Pour cela nous avons choisi de sélectionner les 1000 films les plus vus en France parmi 5 genres : Comédie, Thriller, Drame, Science-fiction, Action-aventure.
+						<br/>
+						<br/>
+						Pour illustrer la place de la femme dans les affiches, nous vous proposons une visualisation autour d’une timeline qui vous permettra de comparer la présence de l’homme et de la femme.
+						<br/>
+						<br/>
+						Bonne navigation à tous !</p>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div id="ascensorBuilding">
 			<div id="acc" class="floor floor-1">

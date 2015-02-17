@@ -347,15 +347,45 @@ ul li a:hover {
 .responsiveSlider .activeBoard {
   border-radius: 15px;
 }
+.modal-header {
+  border: none;
+}
+.modal-header .close {
+  color: #fff;
+}
+.modal-content {
+  background: #2f2f2f;
+  color: #ffec04;
+}
+.ciwoAbout {
+  outline: none;
+  background: #ffec04;
+  color: #000;
+  border: 1px solid #ffec04;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.ciwoAbout:hover {
+  color: #ffec04;
+  background: transparent;
+}
 .ciwo-fixed {
   color: #fff;
   text-align: center;
-  font-size: 70px;
   position: fixed;
   z-index: 99;
   top: 0;
   left: 30px;
   display: none;
+}
+.ciwo-fixed h1 {
+  font-size: 70px;
 }
 .returnWomen {
   display: table;

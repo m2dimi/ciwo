@@ -280,10 +280,34 @@ ul {
     border-radius: 15px;
   }
 }
+.modal-header{
+  border: none;
+  .close{
+    color: #fff;
+  }
+}
+.modal-content{
+  background: #2f2f2f;
+  color: @yellow;
+}
+.ciwoAbout {
+  outline: none;
+  background: @yellow;
+  color: #000;
+  border: 1px solid @yellow;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  .Transition;
+  &:hover{
+    color: @yellow;
+    background: transparent;
+  }
+}
 .ciwo-fixed{
   color: #fff;
   text-align: center;
-  font-size: 70px;
+  h1{font-size: 70px;}
   position: fixed;
   z-index: 99;
   top: 0;
