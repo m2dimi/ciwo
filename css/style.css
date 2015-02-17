@@ -452,7 +452,8 @@ ul li a:hover {
 #years .percent {
   opacity: 0.2;
 }
-#years .activeYear .slider {
+#years .activeYear .men,
+#years .activeYear .women {
   opacity: 1 !important;
 }
 #years .activeYear .percent {
@@ -462,8 +463,11 @@ ul li a:hover {
 #years .activeYear .rightArrow {
   opacity: 1 !important;
 }
-#years .year .slider {
+#years .year .men,
+#years .year .women {
   opacity: 0;
+}
+#years .year .slider {
   max-width: 285px;
   width: 100%;
   margin: 0 auto;
