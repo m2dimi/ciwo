@@ -252,4 +252,21 @@ $(function(){
     rect.attr({
         fill: "#fff"
     });
+
+    var g = Snap("#Capa_2");
+    var timeline2 = g.rect(24, 75, 10, 36);
+    var rect2 = g.rect(12, 92, 35, 10);
+    var circle2 =  g.circle(30, 60, 20);
+
+    circle2.attr({
+        fill: "none",
+        stroke: "#fff",
+        'stroke-width': 10
+    });
+    timeline2.attr({
+        fill: "#fff"
+    });
+    rect2.attr({
+        fill: "#fff"
+    });
 });
