@@ -449,8 +449,14 @@ ul li a:hover {
   transition: 0.3s;
   margin-left: -20px;
 }
+#years .percent {
+  opacity: 0.5;
+}
 #years .activeYear .slider {
   opacity: 1 !important;
+}
+#years .activeYear .percent {
+  opacity: 1;
 }
 #years .year .slider {
   opacity: 0;
