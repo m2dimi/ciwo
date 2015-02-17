@@ -496,6 +496,14 @@ ul li a:hover {
   top: 0;
   left: 0;
 }
+.percentWomen {
+  background: #ffff00;
+  border-radius: 50%;
+}
+.percentMen {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
 /*-----------MediaQueries--------------*/
 @media screen and (max-width: 1366px) {
   .sideBar ul {

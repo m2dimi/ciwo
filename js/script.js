@@ -22,6 +22,7 @@ $(function(){
                         y: data.ciwo[j].year,
                         // img: data.ciwo[j].jpbox,
                         women_count : 0, //data.ciwo[j].presenceFemme,
+                        men_count : 0,
                         count: 0
                     };
                 }
@@ -33,6 +34,9 @@ $(function(){
             for(var k in data_groups) {
                 data_groups[k].women_count = data_groups[k].d.filter(function(d){
                     return d.presenceFemme == "oui"
+                }).length;
+                data_groups[k].men_count = data_groups[k].d.filter(function(d){
+                    return d.presenceFemme == "non"
                 }).length;
                 years.push(data_groups[k])
             }
@@ -46,7 +50,7 @@ $(function(){
             $.each(years, function(i,data)
             {
                 //Affichage des années
-                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="contentDate col-md-2"><svg class="statWomen'+i+'" width="100" height="100"></svg><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
+                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="contentDate col-md-2"><div class="percentWomen" style="width: '+ data.women_count +'0px; height: '+ data.women_count +'0px;"><span>'+data.women_count+'</span></div><a class="date">'+ data.y +'</a><div class="percentMen" style="width: '+ data.men_count +'0px; height: '+ data.men_count +'0px;"><span>'+data.men_count+'</span></div></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
                 $(div_data).appendTo("#years");
 
 
@@ -80,6 +84,7 @@ $(function(){
                         //console.log(years[p].y);
                         nbFilm = years[p].count;
                         //console.log(nbFilm);
+                        console.log(years[p].women_count);
                         iYear = p;
                         break;
                     }
@@ -102,6 +107,7 @@ $(function(){
                         $(afficheMen).appendTo(".men .largeWrap");
                     }
                 }
+
             });
 
 
