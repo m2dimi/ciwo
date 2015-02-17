@@ -64,10 +64,10 @@ $(function(){
                         '<div class="contentDate col-md-2">' +
                             '<div class="percent">' +
                                 '<div class="percentWomen" style="width: '+ valWomen +'px; height: '+ valWomen +'px;">' +
-                                    '<span class="spanPercent-women">'+valWomen+'</span>' +
+                                    '<span class="spanPercent-women">'+valWomen+'%</span>' +
                                 '</div>' +
                                 '<div class="percentMen" style="width: '+ valMen +'px; height: '+ valMen +'px;">' +
-                                    '<span class="spanPercent-men">'+valMen+'</span>' +
+                                    '<span class="spanPercent-men">'+valMen+'%</span>' +
                                 '</div>' +
                         '</div>' +
                         '<a class="date">'+ data.y +'</a>' +
