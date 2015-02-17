@@ -3,12 +3,10 @@ CIWO : CInéma-WOmen
 Groupe composé de : Sophie CHAPOTAT/LEMAISTRE - Yannick HOUSSIN - Marine PEREIRA - Tony TRAN
 
 Thème: 
-
 Visualiser la présence de la femme par rapport au l’homme sur les affiches des meilleurs films d’action-aventure, de drame, de comédie, de science-fiction et de thriller entre 1945 à nos jours.
 
 
 Description de l’interface :
-
 Nous proposons à l’utilisateur une visualisation du rapport présence homme/femme sur les affiches à partir d’une timeline défilant vers le bas par ordre décroissant du plus récent (2014) au plus ancien (1945). Lorsqu’on sélectionne une année, on peut voir la présence de la femme héroïne par rapport à celle de l’homme avec sur la gauche, les films de cette année où l’homme est le héros et sur la droite, les films où la femme est l’héroïne. Les pourcentages sont représentés par des cercles plus ou moins grands selon le ratio. Le pourcentage homme/femme par année est représenté par le prisme de deux symboles représentatifs dont la taille change suivant les pourcentages.
 Nous pouvons ensuite cliquer sur les affiches afin d’obtenir les informations complémentaires telles que le synopsis, le réalisateur, l’acteur principal et la note. Il a fallu définir le critère de sélection (affiche), construire la base de données, sélectionner les sites possédant des données assez conséquentes et facilement exploitables avec KimonoLab, définir la visualisation (à partir d’une timeline) et les codes graphiques.
 Nous avons aussi un système de filtre par genre sur la gauche et en dessous une barre de recherche pour trouver son film préféré.
