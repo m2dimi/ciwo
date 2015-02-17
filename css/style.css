@@ -432,7 +432,11 @@ ul li a:hover {
   transition: 0.3s;
   margin-left: -20px;
 }
-#years .percent {
+#years .date {
+  opacity: 1;
+}
+#years .percentMen,
+#years .percentWomen {
   opacity: 0.2;
 }
 #years .activeYear .men,
@@ -440,11 +444,13 @@ ul li a:hover {
   opacity: 1 !important;
 }
 #years .activeYear .date {
+  opacity: 1;
   color: #ffec04 !important;
   background: #232323 !important;
   transform: scale(1.2);
 }
-#years .activeYear .percent {
+#years .activeYear .percentMen,
+#years .activeYear .percentWomen {
   opacity: 1;
 }
 #years .activeYear .leftArrow,
@@ -491,7 +497,6 @@ ul li a:hover {
   margin: 25px 25px;
   display: table;
   text-align: center;
-  float: left;
   padding-top: 4px;
   font-weight: bold;
   color: #232323;
@@ -534,7 +539,10 @@ ul li a:hover {
 .percentWomen {
   background: #ffff00;
   border-radius: 50%;
-  float: left;
+  /* float: left; */
+  right: -50px;
+  top: 0;
+  position: absolute !important;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s ;
   -ms-transition: 0.3s;
@@ -556,8 +564,10 @@ ul li a:hover {
 .percentMen {
   background: #261913;
   border-radius: 50%;
+  top: 0;
+  left: -65px;
   border: 10px solid #fff;
-  float: left;
+  position: absolute !important;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s ;
   -ms-transition: 0.3s;
