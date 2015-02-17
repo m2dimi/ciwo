@@ -46,12 +46,13 @@ $(function(){
             $.each(years, function(i,data)
             {
                 //Affichage des années
-                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="contentDate col-md-2"><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
+                var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="contentDate col-md-2"><svg class="statWomen'+i+'" width="100" height="100"></svg><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
                 $(div_data).appendTo("#years");
 
-                for(var j in data.d) {
+
+                /*for(var j in data.d) {
                     console.log('YEAR: ', data.y, ', film ', data.d[j].title, ' avec femme: ',data.d[j].presenceFemme)
-                }
+                }*/
 
                 $("li.year").first().addClass("activeYear");
                 $(".year").click(function(){
@@ -62,6 +63,8 @@ $(function(){
                         $(this).addClass("activeYear");
                     }
                 });
+
+
             });
 
             $(".date").click(function(){
@@ -69,7 +72,6 @@ $(function(){
                 var nbFilm = 0;
                 var iYear = -1;
 
-                var countFemme = 0;
 
                 console.log(currentYear);
 
@@ -81,9 +83,15 @@ $(function(){
                         iYear = p;
                         break;
                     }
+
+
+
                 }
 
                 $(".affiche").remove();
+                /*$(".contentDate svg").remove();*/
+
+
                 for( var f=0; f< years[iYear].count; f++){
                     if(years[iYear].d[f].presenceFemme == "oui"){
                         var afficheWo = '<div class="affiche"><a class="direction" data-direction="left" href="#0"><img width="80" height="106" src="' + years[iYear].d[f].jpbox + '"/></a></div>';
@@ -94,10 +102,6 @@ $(function(){
                         $(afficheMen).appendTo(".men .largeWrap");
                     }
                 }
-
-
-
-
             });
 
 

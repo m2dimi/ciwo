@@ -487,6 +487,15 @@ ul li a:hover {
   padding: 2px;
   border-radius: 10px;
 }
+/*SVG*/
+.contentDate {
+  position: relative;
+}
+.contentDate svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /*-----------MediaQueries--------------*/
 @media screen and (max-width: 1366px) {
   .sideBar ul {
