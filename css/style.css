@@ -235,6 +235,12 @@ ul li a:hover {
   transform: translate(-50%);
   border-radius: 50%;
 }
+#timeline .decoCircle #descApp {
+  display: table;
+  text-align: center;
+  color: #fff;
+  padding-top: 40px;
+}
 #contentLine {
   opacity: 0;
   padding: 0;
@@ -488,7 +494,7 @@ ul li a:hover {
   padding: 0;
 }
 #years .year .slider .largeWrap .affiche img {
-  padding: 2px;
+  padding: 0px;
 }
 /*SVG*/
 .contentDate {
