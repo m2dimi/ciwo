@@ -519,8 +519,8 @@ ul li a:hover {
 }
 .percentWomen .spanPercent-women {
   position: absolute;
-  top: -40px;
-  left: -40px;
+  top: 30px;
+  left: 20px;
   color: #ffec04;
 }
 .percentMen {
@@ -539,8 +539,8 @@ ul li a:hover {
 }
 .percentMen .spanPercent-men {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: -40px;
+  left: -70px;
   color: #fff;
 }
 /*-----------MediaQueries--------------*/
