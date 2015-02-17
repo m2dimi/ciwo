@@ -26,13 +26,13 @@ Critère de présence de la femme :
 Visualisation de l’affiche. Présence de la femme en premier ou second plan sur l’affiche 
 
 Données récoltées et sources :
-JPBOX: http://www.jpbox-office.com
+JPBOX : http://www.jpbox-office.com
 Nombre d’entrées (critère de sélection), Nationalité, Année (critère de sélection), Titre
 
 IMDB : http://www.imdb.com
 Acteur, Réalisateur, Synopsis, Note, Genre (filtre)
 
-ALLOCINE:http://www.allocine.fr
+ALLOCINE : http://www.allocine.fr
 Affiches grand format
 
 Codes graphiques :
