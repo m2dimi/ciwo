@@ -450,7 +450,7 @@ ul li a:hover {
   margin-left: -20px;
 }
 #years .percent {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 #years .activeYear .slider {
   opacity: 1 !important;

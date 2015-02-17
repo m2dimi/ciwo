@@ -58,10 +58,10 @@ $(function(){
 
                 var div_data =
                     '<li class="year col-md-12">' +
-                        '<div class="men slider col-md-5">' +
+                        '<div class="men slider col-md-4">' +
                             '<div class="largeWrap"></div>' +
                         '</div>' +
-                        '<div class="contentDate col-md-2">' +
+                        '<div class="contentDate col-md-4">' +
                             '<div class="percent">' +
                                 '<div class="percentMen" style="width: '+ valMen +'px; height: '+ valMen +'px;">' +
                                     '<span class="spanPercent-men">'+valMen+'%</span>' +
@@ -72,7 +72,7 @@ $(function(){
                         '</div>' +
                         '<a class="date">'+ data.y +'</a>' +
                         '</div>' +
-                        '<div class="women slider col-md-5">' +
+                        '<div class="women slider col-md-4">' +
                             '<div class="largeWrap"></div>' +
                         '</div>' +
                     '</li>';
