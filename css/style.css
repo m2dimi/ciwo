@@ -478,7 +478,13 @@ ul li a:hover {
   float: left;
   margin-right: 15px;
 }
+#years .year .slider .largeWrap .affiche a {
+  padding: 0;
+  background: #fff;
+  border-radius: 10px;
+}
 #years .year .slider .largeWrap .affiche img {
+  padding: 2px;
   border-radius: 10px;
 }
 /*-----------MediaQueries--------------*/
