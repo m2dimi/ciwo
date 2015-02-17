@@ -458,6 +458,10 @@ ul li a:hover {
 #years .activeYear .percent {
   opacity: 1;
 }
+#years .activeYear .leftArrow,
+#years .activeYear .rightArrow {
+  opacity: 1 !important;
+}
 #years .year .slider {
   opacity: 0;
   max-width: 285px;
@@ -468,6 +472,22 @@ ul li a:hover {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+}
+#years .year .leftArrow {
+  opacity: 0;
+  position: absolute;
+  left: -30px;
+  top: 30px;
+  font-size: 26px;
+  background: transparent;
+}
+#years .year .rightArrow {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  font-size: 26px;
+  opacity: 0;
+  background: transparent;
 }
 #years .year div {
   position: relative;

@@ -58,12 +58,12 @@ $(function(){
 
                 var div_data =
                     '<li class="year col-md-12">' +
-                        '<div class="col-md-4">'+
-                            '<div class="men slider">' +
-                                '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
+                        '<div class="men col-md-4">'+
+                            '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
+                            '<div class="slider">' +
                                 '<div class="largeWrap"></div>' +
-                                '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                             '</div>' +
+                            '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                         '</div>'+
                         '<div class="contentDate col-md-4">' +
                             '<div class="percent">' +
@@ -76,12 +76,12 @@ $(function(){
                         '</div>' +
                         '<a class="date">'+ data.y +'</a>' +
                         '</div>' +
-                        '<div class="col-md-4">'+
-                            '<div class="women slider">' +
-                                '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
+                        '<div class="women col-md-4">'+
+                            '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
+                            '<div class="slider">' +
                                 '<div class="largeWrap"></div>' +
-                                '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                             '</div>' +
+                            '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                         '</div>'+
                     '</li>';
                 $(div_data).appendTo("#years");

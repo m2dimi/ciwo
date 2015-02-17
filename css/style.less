@@ -396,6 +396,7 @@ ul {
     .percent{
       opacity: 1;
     }
+    .leftArrow, .rightArrow{opacity: 1 !important;}
   }
   .year{
     .slider{
@@ -404,6 +405,22 @@ ul {
       width: 100%;
       margin: 0 auto;
       .Transition;
+    }
+    .leftArrow{
+        opacity: 0;
+        position: absolute;
+        left: -30px;
+        top: 30px;
+        font-size: 26px;
+        background: transparent;
+    }
+    .rightArrow{
+        position: absolute;
+        right: 0;
+      top: 30px;
+      font-size: 26px;
+        opacity: 0;
+        background: transparent;
     }
     div{
       position: relative;
