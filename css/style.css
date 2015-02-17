@@ -289,63 +289,13 @@ ul li a:hover {
   width: 9999px;
   position: relative;
 }
-/*.owl-item{
-  width: 130px !important;
-  margin-right: 10px !important;
-}*/
-.owl-demo .item {
-  padding: 0px;
-  margin: 10px;
-  color: #FFF;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  text-align: center;
-}
-.customNavigation {
-  text-align: center;
-}
-.customNavigation a {
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-.left_scroll {
-  float: left;
-  display: none;
-  background: transparent;
-  color: #fff;
-}
-.left_scroll:hover {
-  color: #ffec04;
-  background: transparent;
-}
-.right_scroll {
-  float: right;
-  background: transparent;
-  color: #fff;
-}
-.right_scroll:hover {
-  color: #ffec04;
-  background: transparent;
-}
-/*Slider*/
-.responsiveSlider img {
-  margin-right: 10px;
-  float: left;
-  border-radius: 5px;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s ;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-.responsiveSlider .activeBoard {
-  border-radius: 15px;
+#decoWo {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  background: #fff;
+  bottom: -45px;
+  left: 26px;
 }
 .modal-header {
   border: none;
@@ -470,7 +420,7 @@ ul li a:hover {
   margin: 55% auto 0;
 }
 #years {
-  margin-top: 250px;
+  margin-top: 320px;
   opacity: 0;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s ;
