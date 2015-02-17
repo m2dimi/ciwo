@@ -15,13 +15,13 @@ $(function(){
             var data_groups = {},
                 years = [];
 
-            for(var j=0; j<data.ciwo.length; j++) {
+            for(var j=0; j < data.ciwo.length; j++) {
                 if(!data_groups[data.ciwo[j].year]) {
                     data_groups[data.ciwo[j].year] = {
                         d: [],
                         y: data.ciwo[j].year,
-                        img: data.ciwo[j].jpbox,
-                        woman : data.ciwo[j].presenceFemme,
+                        // img: data.ciwo[j].jpbox,
+                        women_count : 0, //data.ciwo[j].presenceFemme,
                         count: 0
                     };
                 }
@@ -29,8 +29,11 @@ $(function(){
                 data_groups[data.ciwo[j].year].d.push(data.ciwo[j]);
             }
 
-            // rebuilding the year list
+            // rebuilding the year list and calculating women %
             for(var k in data_groups) {
+                data_groups[k].women_count = data_groups[k].d.filter(function(d){
+                    return d.presenceFemme == "oui"
+                }).length;
                 years.push(data_groups[k])
             }
             console.log('unsorted', years);
