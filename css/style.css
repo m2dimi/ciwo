@@ -439,6 +439,11 @@ ul li a:hover {
 #years .activeYear .women {
   opacity: 1 !important;
 }
+#years .activeYear .date {
+  color: #ffec04 !important;
+  background: #232323 !important;
+  transform: scale(1.2);
+}
 #years .activeYear .percent {
   opacity: 1;
 }
