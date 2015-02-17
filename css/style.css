@@ -512,6 +512,12 @@ ul li a:hover {
   font-size: 20px;
   font-weight: bold;
 }
+.percentWomen .spanPercent-women {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  color: #ffec04;
+}
 .percentMen {
   border: 10px solid #ffffff;
   border-radius: 50%;
@@ -524,6 +530,12 @@ ul li a:hover {
   font-size: 20px;
   color: #fff;
   font-weight: bold;
+}
+.percentMen .spanPercent-men {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  color: #fff;
 }
 /*-----------MediaQueries--------------*/
 @media screen and (max-width: 1366px) {
