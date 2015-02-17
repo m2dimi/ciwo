@@ -3,7 +3,6 @@ CIWO : CInéma-WOmen
 Groupe composé de : Sophie CHAPOTAT/LEMAISTRE - Yannick HOUSSIN - Marine PEREIRA - Tony TRAN
 
 Thème: 
-
 Visualiser la présence de la femme par rapport au l’homme sur les affiches des meilleurs films d’action-aventure, de drame, de comédie, de science-fiction et de thriller entre 1945 à nos jours.
 
 Description de l’interface :
