@@ -59,11 +59,11 @@ $(function(){
                 var div_data =
                     '<li class="year col-md-12">' +
                         '<div class="men col-md-4">'+
-
+                            '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
                             '<div class="slider">' +
                                 '<div class="largeWrap"></div>' +
                             '</div>' +
-
+                            '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                         '</div>'+
                         '<div class="contentDate col-md-4">' +
                             '<div class="percent">' +
@@ -77,11 +77,11 @@ $(function(){
                         '<a class="date">'+ data.y +'</a>' +
                         '</div>' +
                         '<div class="women col-md-4">'+
-
+                            '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
                             '<div class="slider">' +
                                 '<div class="largeWrap"></div>' +
                             '</div>' +
-
+                            '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                         '</div>'+
                     '</li>';
                 $(div_data).appendTo("#years");
@@ -92,7 +92,7 @@ $(function(){
                 /*for(var j in data.d) {
                     console.log('YEAR: ', data.y, ', film ', data.d[j].title, ' avec femme: ',data.d[j].presenceFemme)
                 }*/
-
+                
                 $("li.year").first().addClass("activeYear");
                 $(".year").click(function(){
                     if (!$('this').hasClass("activeYear")) {
@@ -108,7 +108,37 @@ $(function(){
             men_entries = $(".men").length;
             woment_entries = $(".women").length;
 
+            $(".men .leftArrow").click(function(e) {
+                e.preventDefault();
+                $(".men .largeWrap").animate({
+                    'margin-left': '+=95'
+                });
+            });
 
+
+            $(".men .rightArrow").click(function(e) {
+                e.preventDefault();
+                $(".men .largeWrap").animate({
+                    'margin-left': '-=95'
+                });
+            });
+
+
+
+            $(".women .leftArrow").click(function(e) {
+                e.preventDefault();
+                $(".women .largeWrap").animate({
+                    'margin-left': '+=95'
+                });
+            });
+
+
+            $(".women .rightArrow").click(function(e) {
+                e.preventDefault();
+                $(".women .largeWrap").animate({
+                    'margin-left': '-=95'
+                });
+            });
 
 
             $(".date").click(function(){
@@ -138,65 +168,15 @@ $(function(){
 
 
                 for( var f=0; f< years[iYear].count; f++){
-                    var leftArr =  '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>';
-                    var rightArr =  '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>';
-                    $(leftArr).appendTo(".women");
-                    $(rightArr).appendTo(".women");
-
-                    $(leftArr).appendTo(".men");
-                    $(rightArr).appendTo(".men");
                     if(years[iYear].d[f].presenceFemme == "oui"){
-
-                        var afficheWo =
-                            '<div class="affiche">' +
-                                '<a class="direction" data-direction="left" href="#0">' +
-                                    '<img width="80" height="106" src="' + years[iYear].d[f].jpbox + '"/>' +
-                                '</a>' +
-                            '</div>';
+                        var afficheWo = '<div class="affiche"><a class="direction" data-direction="left" href="#0"><img width="80" height="106" src="' + years[iYear].d[f].jpbox + '"/></a></div>';
                         $(afficheWo).appendTo(".women .largeWrap");
 
                     }else{
-                        var afficheMen =
-                            '<div class="affiche">' +
-                                '<a class="direction" data-direction="right" href="#0">' +
-                                    '<img width="80" height="106" src="' + years[iYear].d[f].jpbox + '"/>' +
-                                '</a>' +
-                            '</div>';
+                        var afficheMen = '<div class="affiche"><a class="direction" data-direction="right" href="#0"><img width="80" height="106" src="' + years[iYear].d[f].jpbox + '"/></a></div>';
                         $(afficheMen).appendTo(".men .largeWrap");
                     }
                 }
-
-                $(".men .leftArrow").click(function(e) {
-                    e.preventDefault();
-                    $(".men .largeWrap").animate({
-                        'margin-left': '+=95'
-                    });
-                });
-
-
-                $(".men .rightArrow").click(function(e) {
-                    e.preventDefault();
-                    $(".men .largeWrap").animate({
-                        'margin-left': '-=95'
-                    });
-                });
-
-
-
-                $(".women .leftArrow").click(function(e) {
-                    e.preventDefault();
-                    $(".women .largeWrap").animate({
-                        'margin-left': '+=95'
-                    });
-                });
-
-
-                $(".women .rightArrow").click(function(e) {
-                    e.preventDefault();
-                    $(".women .largeWrap").animate({
-                        'margin-left': '-=95'
-                    });
-                });
 
             });
 
