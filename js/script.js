@@ -49,6 +49,9 @@ $(function(){
                 var div_data = '<li class="year col-md-12"><div class="men slider col-md-5"><div class="largeWrap"></div></div><div class="col-md-2"><a class="date">'+ data.y +'</a></div><div class="women slider col-md-5"><div class="largeWrap"></div></div></li>';
                 $(div_data).appendTo("#years");
 
+                for(var j in data.d) {
+                    console.log('YEAR: ', data.y, ', film ', data.d[j].title, ' avec femme: ',data.d[j].presenceFemme)
+                }
 
                 $("li.year").first().addClass("activeYear");
                 $(".year").click(function(){
