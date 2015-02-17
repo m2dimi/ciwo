@@ -2,7 +2,7 @@ CIWO : CInéma-WOmen
 
 Groupe composé de : Sophie CHAPOTAT/LEMAISTRE - Yannick HOUSSIN - Marine PEREIRA - Tony TRAN
 
-Thème: 
+Thème : 
 Visualiser la présence de la femme par rapport au l’homme sur les affiches des meilleurs films d’action-aventure, de drame, de comédie, de science-fiction et de thriller entre 1945 à nos jours.
 
 
@@ -11,7 +11,7 @@ Nous proposons à l’utilisateur une visualisation du rapport présence homme/f
 Nous pouvons ensuite cliquer sur les affiches afin d’obtenir les informations complémentaires telles que le synopsis, le réalisateur, l’acteur principal et la note. Il a fallu définir le critère de sélection (affiche), construire la base de données, sélectionner les sites possédant des données assez conséquentes et facilement exploitables avec KimonoLab, définir la visualisation (à partir d’une timeline) et les codes graphiques.
 Nous avons aussi un système de filtre par genre sur la gauche et en dessous une barre de recherche pour trouver son film préféré.
 
-Champ de recherche:
+Champ de recherche :
 Les films 1945-2014. L’après guerre où le cinéma devient une véritable industrie jusqu’à nos jours.
 
 Critère de sélection des films :
