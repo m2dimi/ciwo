@@ -58,9 +58,13 @@ $(function(){
 
                 var div_data =
                     '<li class="year col-md-12">' +
-                        '<div class="men slider col-md-4">' +
-                            '<div class="largeWrap"></div>' +
-                        '</div>' +
+                        '<div class="col-md-4">'+
+                            '<div class="men slider">' +
+                                '<a href="#0" class="leftArrow">left</a>' +
+                                '<div class="largeWrap"></div>' +
+                                '<a href="#0" class="rightArrow">right</a>' +
+                            '</div>' +
+                        '</div>'+
                         '<div class="contentDate col-md-4">' +
                             '<div class="percent">' +
                                 '<div class="percentMen" style="width: '+ valMen +'px; height: '+ valMen +'px;">' +
@@ -72,11 +76,17 @@ $(function(){
                         '</div>' +
                         '<a class="date">'+ data.y +'</a>' +
                         '</div>' +
-                        '<div class="women slider col-md-4">' +
-                            '<div class="largeWrap"></div>' +
-                        '</div>' +
+                        '<div class="col-md-4">'+
+                            '<div class="women slider">' +
+                                '<a href="#0" class="leftArrow">left</a>' +
+                                '<div class="largeWrap"></div>' +
+                                '<a href="#0" class="rightArrow">right</a>' +
+                            '</div>' +
+                        '</div>'+
                     '</li>';
                 $(div_data).appendTo("#years");
+
+
 
 
                 /*for(var j in data.d) {
@@ -95,6 +105,41 @@ $(function(){
 
 
             });
+            men_entries = $(".men").length;
+            woment_entries = $(".women").length;
+
+            $(".men .leftArrow").click(function(e) {
+                e.preventDefault();
+                $(".men .largeWrap").animate({
+                    'margin-left': '+=95'
+                });
+            });
+
+
+            $(".men .rightArrow").click(function(e) {
+                e.preventDefault();
+                $(".men .largeWrap").animate({
+                    'margin-left': '-=95'
+                });
+            });
+
+
+
+            $(".women .leftArrow").click(function(e) {
+                e.preventDefault();
+                $(".women .largeWrap").animate({
+                    'margin-left': '+=95'
+                });
+            });
+
+
+            $(".women .rightArrow").click(function(e) {
+                e.preventDefault();
+                $(".women .largeWrap").animate({
+                    'margin-left': '-=95'
+                });
+            });
+
 
             $(".date").click(function(){
                 var currentYear = $(this).html();
@@ -205,7 +250,4 @@ $(function(){
     rect.attr({
         fill: "#fff"
     });
-
-
-
 });
