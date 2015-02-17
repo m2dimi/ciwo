@@ -524,8 +524,7 @@ ul li a:hover {
   text-align: center;
   display: block;
   padding: 28%;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
 }
 .percentWomen .spanPercent-women {
   position: absolute;
@@ -555,9 +554,8 @@ ul li a:hover {
   text-align: center;
   display: block;
   padding: 28%;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
-  font-weight: bold;
 }
 .percentMen .spanPercent-men {
   position: absolute;
