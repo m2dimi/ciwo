@@ -60,9 +60,9 @@ $(function(){
                     '<li class="year col-md-12">' +
                         '<div class="col-md-4">'+
                             '<div class="men slider">' +
-                                '<a href="#0" class="leftArrow">left</a>' +
+                                '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
                                 '<div class="largeWrap"></div>' +
-                                '<a href="#0" class="rightArrow">right</a>' +
+                                '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                             '</div>' +
                         '</div>'+
                         '<div class="contentDate col-md-4">' +
@@ -78,9 +78,9 @@ $(function(){
                         '</div>' +
                         '<div class="col-md-4">'+
                             '<div class="women slider">' +
-                                '<a href="#0" class="leftArrow">left</a>' +
+                                '<a href="#0" class="leftArrow"><span class="icon-arrow-left3"></span></a>' +
                                 '<div class="largeWrap"></div>' +
-                                '<a href="#0" class="rightArrow">right</a>' +
+                                '<a href="#0" class="rightArrow"><span class="icon-arrow-right3"></span></a>' +
                             '</div>' +
                         '</div>'+
                     '</li>';
