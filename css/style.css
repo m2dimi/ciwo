@@ -471,6 +471,7 @@ ul li a:hover {
 #years .year div .date:hover {
   color: #fff;
   background: #232323;
+  transform: scale(1.2);
 }
 #years .year .slider {
   overflow: hidden;
@@ -485,12 +486,9 @@ ul li a:hover {
 }
 #years .year .slider .largeWrap .affiche a {
   padding: 0;
-  background: #fff;
-  border-radius: 10px;
 }
 #years .year .slider .largeWrap .affiche img {
   padding: 2px;
-  border-radius: 10px;
 }
 /*SVG*/
 .contentDate {
@@ -509,6 +507,18 @@ ul li a:hover {
   background: #ffff00;
   border-radius: 50%;
   float: left;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.percentWomen:hover {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
 }
 .percentWomen span {
   text-align: center;
@@ -528,6 +538,18 @@ ul li a:hover {
   border-radius: 50%;
   border: 10px solid #fff;
   float: left;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+.percentMen:hover {
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3);
 }
 .percentMen span {
   text-align: center;
