@@ -237,6 +237,11 @@ $(function(){
         }
     );
 
+    $('.scrollToTop').click(function(){
+        $('body').animate({scrollTop : 0},800);
+        return false;
+    });
+
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn('slow');
         $("#legend").fadeIn('slow');
