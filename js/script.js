@@ -181,13 +181,13 @@ $(function(){
 
             for(var m in data.ciwo) {
 
-                if(data.ciwo[m].genre == "thriller" && data.ciwo[m].presenceFemme == "oui" ) {
+                if(data.ciwo[m].genre == "drame") {
                     var dataT = data.ciwo[m].genre;
-                    console.log(data.ciwo.length);
-
+                    console.log(data.ciwo[m].genre);
+                    /*$('.aa').append('<div>' + data.ciwo[m].length +'</div>');*/
                 }
             }
-            $('.aa').append('<div>' + dataT.length +'</div>');
+
 
             $(".date").click(function(){
                 var currentYear = $(this).html();
