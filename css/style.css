@@ -647,7 +647,7 @@ ul li a:hover {
   background: #fff;
   width: 50px;
   height: 10px;
-  margin: 25px 25px;
+  margin: 45px 25px;
   display: table;
   position: relative;
   z-index: 1;
@@ -792,7 +792,7 @@ ul li a:hover {
   border-radius: 50%;
   /* float: left; */
   right: -50px;
-  top: 0;
+  top: 24px;
   position: absolute !important;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s ;
@@ -815,7 +815,7 @@ ul li a:hover {
 .percentMen {
   background: #ffffff;
   border-radius: 50%;
-  top: 0;
+  top: 24px;
   left: -65px;
   border: 10px solid #fff;
   position: absolute !important;
