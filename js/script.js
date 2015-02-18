@@ -179,11 +179,15 @@ $(function(){
                 drame_counte = 0;
 
 
-            for(var m=0; m<data.ciwo.length; m++) {
+            for(var m in data.ciwo) {
 
-                if(data.ciwo[m].genre == "thriller" && data.ciwo[m].presenceFemme == "oui" ){
-                console.log(data.ciwo[m].genre.length);}
+                if(data.ciwo[m].genre == "thriller" && data.ciwo[m].presenceFemme == "oui" ) {
+                    var dataT = data.ciwo[m].genre;
+                    console.log(data.ciwo.length);
+
+                }
             }
+            $('.aa').append('<div>' + dataT.length +'</div>');
 
             $(".date").click(function(){
                 var currentYear = $(this).html();
