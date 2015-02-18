@@ -724,7 +724,7 @@ ul li a:hover {
   width: 70px;
   height: 70px;
   border: 10px solid #fff;
-  background: #261913;
+  background: #ffffff;
   border-radius: 50%;
 }
 .womenlegend {
@@ -786,7 +786,7 @@ ul li a:hover {
   font-weight: bold;
 }
 .percentWomen {
-  background: #ffff00;
+  background: #ffec04;
   border-radius: 50%;
   /* float: left; */
   right: -50px;
@@ -811,7 +811,7 @@ ul li a:hover {
   color: #ffec04;
 }
 .percentMen {
-  background: #261913;
+  background: #ffffff;
   border-radius: 50%;
   top: 0;
   left: -65px;
