@@ -40,6 +40,21 @@ $(function(){
                 data_groups[k].men_count = data_groups[k].d.filter(function(d){
                     return d.presenceFemme == "non"
                 }).length;
+                /*data_groups[k].action_count = data_groups[k].d.filter(function(d){
+                    return d.genre == "action-aventure"
+                }).length;
+                data_groups[k].scifi_count = data_groups[k].d.filter(function(d){
+                    return d.genre == "science-fiction"
+                }).length;
+                data_groups[k].thriller_count = data_groups[k].d.filter(function(d){
+                    return d.genre == "thriller"
+                }).length;
+                data_groups[k].drame_count = data_groups[k].d.filter(function(d){
+                    return d.genre == "drame"
+                }).length;
+                data_groups[k].comedie_count = data_groups[k].d.filter(function(d){
+                    return d.genre == "comedie"
+                }).length;*/
                 years.push(data_groups[k])
             }
             console.log('unsorted', years);
@@ -57,6 +72,21 @@ $(function(){
 
                 var valMen = Math.round(menPercent);
                 var valWomen = Math.round(womenPercent);
+
+                /*var returnAction = $('.aa').html();
+                console.log(returnAction);
+
+                 returnComedie = $('.com').html();
+                console.log(returnComedie);
+
+                var returnDrame = $('.dra').html();
+                console.log(returnDrame);
+
+                var returnSci = $('.sci').html();
+                console.log(returnSci);
+
+                var returnThriller = $('.thri').html();
+                console.log(returnThriller);*/
 
                 var div_data =
                     '<li class="year col-md-12">' +
@@ -107,8 +137,8 @@ $(function(){
 
 
             });
-            men_entries = $(".men").length;
-            woment_entries = $(".women").length;
+
+
 
             $(".men .leftArrow").click(function(e) {
                 e.preventDefault();
@@ -142,6 +172,18 @@ $(function(){
                 });
             });
 
+            var action_count = 0,
+                thriller_count = 0,
+                comedie_count = 0,
+                scifi_count = 0,
+                drame_counte = 0;
+
+
+            for(var m=0; m<data.ciwo.length; m++) {
+
+                if(data.ciwo[m].genre == "thriller" && data.ciwo[m].presenceFemme == "oui" ){
+                console.log(data.ciwo[m].genre.length);}
+            }
 
             $(".date").click(function(){
                 var currentYear = $(this).html();
@@ -187,23 +229,24 @@ $(function(){
                 console.log('YEAR: ', data.y, ', film ', data.d[j].title, ' avec femme: ',data.d[j].presenceFemme);
             }
 
-            var percent = ''
-
 
         }
     );
 
     $("#femaleSymbol").click(function(){
         $(".ciwo-fixed").fadeIn();
+        $("#legend").fadeIn();
+        $("#buttonMenu").fadeIn();
         $("#line").animate({
-            height : '13000px'
+            height : '8500px'
         }, 5000);
         $("#years").delay(1000).animate({
             opacity : 1
         });
     });
-
-
+    $('#buttonMenu').click(function(){
+        $('#menu').toggleClass('menu-open');
+    });
     /*Ascensor Plugin*/
     var ascensor = $('#ascensorBuilding').ascensor({
         direction: [[0,1],[1,1],[1,0],[1,2],[1,1],[1,2],[2,0],[2,1]],

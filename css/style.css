@@ -462,7 +462,7 @@ ul li a:hover {
   opacity: 0;
 }
 #years .year .slider {
-  max-width: 365px;
+  max-width: 270px;
   width: 100%;
   margin: 0 auto;
   -webkit-transition: 0.3s;
@@ -498,6 +498,8 @@ ul li a:hover {
   height: 10px;
   margin: 25px 25px;
   display: table;
+  position: relative;
+  z-index: 1;
   text-align: center;
   padding-top: 4px;
   font-weight: bold;
@@ -523,7 +525,92 @@ ul li a:hover {
   padding: 0;
 }
 #years .year .slider .largeWrap .affiche img {
-  padding: 0px;
+  padding: 0;
+}
+#legend {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  z-index: 99;
+  color: #fff;
+  display: none;
+}
+#buttonMenu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  background: #ffec04;
+  border: 1px solid #ffec04;
+  outline: none;
+  padding: 20px 5px;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s ;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+#buttonMenu:hover {
+  color: #ffec04;
+  background: transparent;
+}
+.listGender {
+  position: fixed;
+  z-index: 1;
+  top: 58%;
+  right: 30%;
+  color: #ffffff;
+}
+.listGender li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+.menLegend {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #fff;
+  background: #261913;
+  border-radius: 50%;
+}
+.womenlegend {
+  width: 70px;
+  height: 70px;
+  background: #ffec04;
+  border-radius: 50%;
+}
+.menu-open {
+  transform: translate(60%, -50%) !important;
+}
+#menu {
+  display: table;
+  position: fixed;
+  top: 10%;
+  width: 400px;
+  right: 10%;
+  z-index: 1;
+  transform: translate(133%, -80%);
+  height: 550px;
+  background: rgba(35, 35, 35, 0.7);
+  border-radius: 100%;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
+#menu p {
+  position: fixed;
+  z-index: 1;
+  top: 45%;
+  display: block;
+  width: 185px;
+  right: 50%;
+  font-size: 14px;
+  color: #ffffff;
 }
 /*SVG*/
 .contentDate {
