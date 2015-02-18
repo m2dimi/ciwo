@@ -309,9 +309,12 @@ ul li a:hover {
   right: 60px;
 }
 .right {
-  position: absolute;
+  position: fixed;
   bottom: 50px;
   right: 32px;
+  z-index: 1;
+  font-size: 40px;
+  display: none;
 }
 .selected a {
   color: white;
@@ -741,9 +744,9 @@ ul li a:hover {
 #menu {
   display: table;
   position: fixed;
-  top: 10%;
+  top: 15%;
   width: 480px;
-  right: 10%;
+  right: 13%;
   z-index: 1;
   transform: translate(133%, -80%);
   height: 550px;

@@ -238,9 +238,10 @@ $(function(){
     );
 
     $("#femaleSymbol").click(function(){
-        $(".ciwo-fixed").fadeIn();
-        $("#legend").fadeIn();
-        $("#buttonMenu").fadeIn();
+        $(".ciwo-fixed").fadeIn('slow');
+        $("#legend").fadeIn('slow');
+        $("#buttonMenu").fadeIn('slow');
+        $(".right").fadeIn('slow');
         $("#line").animate({
             height : '8500px'
         }, 5000);
