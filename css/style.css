@@ -730,7 +730,8 @@ ul li a:hover {
 .womenlegend {
   width: 70px;
   height: 70px;
-  background: #ffec04;
+  background: #232323;
+  border: 10px solid #ffec04;
   border-radius: 50%;
 }
 .menu-open {
@@ -786,7 +787,8 @@ ul li a:hover {
   font-weight: bold;
 }
 .percentWomen {
-  background: #ffec04;
+  background: #232323;
+  border: 10px solid #ffec04;
   border-radius: 50%;
   /* float: left; */
   right: -50px;

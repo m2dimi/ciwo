@@ -291,14 +291,14 @@ $(function(){
 
     circle.attr({
         fill: "none",
-        stroke: "#fff",
+        stroke: "#ffec04",
         'stroke-width': 16
     });
     timeline.attr({
-        fill: "#fff"
+        fill: "#ffec04"
     });
     rect.attr({
-        fill: "#fff"
+        fill: "#ffec04"
     });
 
     var g = Snap("#Capa_2");
@@ -308,13 +308,13 @@ $(function(){
 
     circle2.attr({
         fill: "none",
-        stroke: "#fff",
+        stroke: "#ffec04",
         'stroke-width': 10
     });
     timeline2.attr({
-        fill: "#fff"
+        fill: "#ffec04"
     });
     rect2.attr({
-        fill: "#fff"
+        fill: "#ffec04"
     });
 });
