@@ -598,6 +598,7 @@ ul li a:hover {
   opacity: 1;
   color: #ffec04 !important;
   background: #232323 !important;
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 #years .activeYear .percentMen,
@@ -659,6 +660,7 @@ ul li a:hover {
 #years .year div .date:hover {
   color: #fff;
   background: #232323;
+  -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 #years .year .slider {
@@ -735,6 +737,10 @@ ul li a:hover {
   border-radius: 50%;
 }
 .menu-open {
+  -webkit-transform: translate(55%, -50%) !important;
+  -moz-transform: translate(55%, -50%) !important;
+  -ms-transform: translate(55%, -50%) !important;
+  -o-transform: translate(55%, -50%) !important;
   transform: translate(55%, -50%) !important;
 }
 #contentFilm {
@@ -749,6 +755,10 @@ ul li a:hover {
   width: 480px;
   right: 13%;
   z-index: 1;
+  -webkit-transform: translate(133%, -80%);
+  -moz-transform: translate(133%, -80%);
+  -ms-transform: translate(133%, -80%);
+  -o-transform: translate(133%, -80%);
   transform: translate(133%, -80%);
   height: 550px;
   background: rgba(35, 35, 35, 0.7);
